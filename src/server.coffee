@@ -13,7 +13,7 @@ require("babel/register")
 dist = path.join(__dirname, '/../dist')
 app = express()
 # enable if you have a favicon
-app.use favicon("#{dist}/favicon.png")
+app.use favicon("#{dist}/images/favicon.png")
 app.use logger("dev")
 app.use bodyParser.json()
 app.use bodyParser.urlencoded(extended: true)

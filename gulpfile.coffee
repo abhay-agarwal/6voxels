@@ -11,6 +11,7 @@ rimraf = require 'rimraf'
 GLOBAL.Promise = (require 'es6-promise').Promise # to make gulp-postcss happy
 
 src_path = "src"
+img_path = "images"
 components_path = "bower_components"
 modules_path = "node_modules"
 semantic_path = "#{modules_path}/semantic-ui-css"
@@ -72,7 +73,7 @@ gulp.task 'clean', ->
 
 gulp.task 'copy', ->
   gulp.src("#{src_path}/*.html").pipe(gulp.dest(dist_path))
-  gulp.src("#{src_path}/favicon.ico").pipe(gulp.dest(dist_path))
+  gulp.src("#{img_path}/**/*").pipe(gulp.dest(dist_path + "/#{img_path}"))
   gulp.src("#{semantic_path}/themes/default/assets/**/*").pipe(gulp.dest("#{dist_path}/themes/default/assets/"))
 
 gulp.task 'build', ['clean', 'copy', 'css', 'js']
