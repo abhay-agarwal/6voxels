@@ -1,5 +1,6 @@
 window.$ = window.jQuery = require('jquery')
 require('semantic-ui-css/semantic')
+require('isotope-layout/dist/isotope.pkgd')
 React = require('react/addons')
 Router = require('react-router')
 Header = require('./header')
@@ -7,23 +8,49 @@ Header = require('./header')
 {Route, RouteHandler, DefaultRoute, Link} = Router
 
 Home = React.createClass
-  render: ->
-    <div className="column">
-      <div classNakme="ui segment">
-        <h1 className="ui header">
-          <span>Get to work!</span>
-          <div className="sub header">
-            Make sure to check out README.md for development notes.
+  render: -><div className="js-isotope stack"
+                 data-isotope-options='{"itemSelector":".stackable","layoutMode":"masonry"}'>
+    <div className="three column ui grid">
+      <div className="stackable column">
+        <div className="ui segment">
+          <span>Project Name</span>
+          <div style={{"margin-top": "1rem"}}>
+            <p>This is a test piece of text for me here that is slightly too large for its own good</p>
           </div>
-        </h1>
+        </div>
+      </div>
+      <div className="stackable column">
+        <div className="ui segment">
+          <span>Project Name</span>
+          <div style={{"margin-top": "1rem"}}>
+            <p>This is a test piece of text for me here</p>
+          </div>
+    </div>
+      </div>
+      <div className="stackable column">
+        <div className="ui segment">
+          <span>Project Name</span>
+          <div style={{"margin-top": "1rem"}}>
+            <p>This is a test piece of text for me here</p>
+          </div>
+        </div>
+      </div>
+      <div className="stackable column">
+        <div className="ui segment">
+          <span>Project Name</span>
+          <div style={{"margin-top": "1rem"}}>
+            <p>This is a test piece of text for me here</p>
+          </div>
+        </div>
       </div>
     </div>
+  </div>
 
 About = React.createClass
   render: ->
     <div className="column">
       <div className="ui segment">
-        <h4 className="ui black header">This is the about page.</h4>
+        <h4 className="black ui header">This is the about page.</h4>
       </div>
     </div>
 
@@ -31,7 +58,7 @@ Main = React.createClass
   render: ->
     <div>
       <Header/>
-      <div className="ui page grid">
+      <div className="main ui container">
         <RouteHandler {...@props}/>
       </div>
     </div>
