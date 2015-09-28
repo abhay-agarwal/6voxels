@@ -4,45 +4,32 @@ require('isotope-layout/dist/isotope.pkgd')
 React = require('react/addons')
 Router = require('react-router')
 Header = require('./header')
-
+Data = require('./data')
 {Route, RouteHandler, DefaultRoute, Link} = Router
 
-Home = React.createClass
-  render: -><div className="js-isotope stack"
-                 data-isotope-options='{"itemSelector":".stackable","layoutMode":"masonry"}'>
-    <div className="three column ui grid">
-      <div className="stackable column">
-        <div className="ui segment">
-          <span>Project Name</span>
-          <div style={{"margin-top": "1rem"}}>
-            <p>This is a test piece of text for me here that is slightly too large for its own good</p>
-          </div>
-        </div>
+globals = {
+  isotope: {
+    class: 'stackable',
+    options: '{"itemSelector":".stackable","layoutMode":"masonry"}'
+  }
+}
+
+Post = (content) ->
+  <div className="#{globals.isotope.class} column" key={Math.random()}>
+    <div className="ui segment">
+      <span>{content.title}</span>
+      <div style={{"marginTop": "1rem"}}>
+        <p>{content.blurb}</p>
       </div>
-      <div className="stackable column">
-        <div className="ui segment">
-          <span>Project Name</span>
-          <div style={{"margin-top": "1rem"}}>
-            <p>This is a test piece of text for me here</p>
-          </div>
     </div>
-      </div>
-      <div className="stackable column">
-        <div className="ui segment">
-          <span>Project Name</span>
-          <div style={{"margin-top": "1rem"}}>
-            <p>This is a test piece of text for me here</p>
-          </div>
-        </div>
-      </div>
-      <div className="stackable column">
-        <div className="ui segment">
-          <span>Project Name</span>
-          <div style={{"margin-top": "1rem"}}>
-            <p>This is a test piece of text for me here</p>
-          </div>
-        </div>
-      </div>
+  </div>
+
+Home = React.createClass
+  render: -><div
+      className="js-isotope stack"
+      data-isotope-options={globals.isotope.options}>
+    <div className="two column ui grid">
+      {Post content for content in Data.posts}
     </div>
   </div>
 

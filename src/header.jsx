@@ -22,10 +22,10 @@ export default React.createClass({
     <Link className="item" to="about">
       <i className="mail icon"></i>
     </Link>
-    <div className="ui dropdown item" tabindex="0">
+    <div className="ui dropdown item" tabIndex="0">
       Dropdown
       <i className="dropdown icon"></i>
-      <div className="menu" tabindex="-1">
+      <div className="menu" tabIndex="-1">
         <div className="item">Action</div>
         <div className="item">Another Action</div>
         <div className="item">Something else here</div>
