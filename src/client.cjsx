@@ -14,14 +14,14 @@ Home = React.createClass
     <div className="main container">
       <div className="js-isotope stack" data-isotope-options={Data.isotope.options}>
         <div className="doubling three column ui grid">
-          {<Post content={content}/> for content in Data.posts}
+          {<Post content={content} key={content.folder}/> for content in Data.posts}
         </div>
       </div>
     </div>
 
 Statement = React.createClass
   render: ->
-    <div className="long ui modal">
+    <div id="statement" className="long ui modal">
       <h2 className="ui header">
         Test
       </h2>
@@ -29,7 +29,7 @@ Statement = React.createClass
 
 Bio = React.createClass
   render: ->
-    <div className="long ui modal">
+    <div id="bio" className="long ui modal">
       <h2 className="ui header">
         Test
       </h2>
@@ -37,7 +37,7 @@ Bio = React.createClass
 
 Contact = React.createClass
   render: ->
-    <div className="long ui modal">
+    <div id="contact" className="long ui modal">
       <h2 className="ui header">
         Test
       </h2>
@@ -48,13 +48,13 @@ Footer = React.createClass
     <div className="ui inverted vertical footer segment">
       <div className="ui container">
         <div className="ui inverted divided equal height stackable grid">
-          <div class="three wide column">
+          <div className="three wide column">
             Test
           </div>
-          <div class="three wide column">
+          <div className="three wide column">
             Test
           </div>
-          <div class="three wide column">
+          <div className="three wide column">
             Test
           </div>
         </div>

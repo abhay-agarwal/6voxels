@@ -6,7 +6,7 @@ Data = require('./data')
 class Post extends React.Component
   constructor: (@props) ->
     super @props
-    @state = {hovered: false, loading: true, modal: false}
+    @state = {hovered: false, loading: true}
     @key = Data.hash(@props.content.title)
 
   loaded: () ->
@@ -14,28 +14,29 @@ class Post extends React.Component
     $(".stack").isotope()
 
   modal: () ->
-    @setState({modal: true})
     $("#"+@key).modal('show')
 
   render: () ->
     classes = [
       'hovered' if this.state.hovered
       'loading' if this.state.loading
-      'ui segment'
+      'ui post segment'
     ].join(' ')
-    <div className="#{Data.isotope.class} column" key={@key}>
-      <div className={classes}
-           onMouseOver={=> @setState({hovered: true})}
-           onMouseOut={=> @setState({hovered: false})}
-           onClick={=> @modal()}>
-        <img className="ui fluid image"
-             src="#{Data.images}#{@props.content.folder}/intro.jpg"
-             onLoad={=> @loaded()}/>
-        <div className="ui message" style={{"marginTop": "1rem"}}>
-          <div className="header">{@props.content.title}</div>
-          <p>{@props.content.blurb}</p>
+    <div className="#{Data.isotope.class} #{@props.content.tags.join(' ')} column">
+      <a href="#" onClick={=> @modal()}>
+        <div className={classes}
+             onMouseOver={=> @setState({hovered: true})}
+             onMouseOut={=> @setState({hovered: false})}
+             >
+          <img className="ui fluid image"
+               src="#{Data.images}#{@props.content.folder}/intro.jpg"
+               onLoad={=> @loaded()}/>
+          <div className="ui description container" style={{"marginTop": "1rem"}}>
+            <div className="ui dividing header">{@props.content.title}</div>
+            <div className="ui blurb">{@props.content.blurb}</div>
+          </div>
         </div>
-      </div>
+      </a>
       <div id={@key} className="long ui modal">
         <h1 className="ui header">
           {@props.content.title}
@@ -44,7 +45,7 @@ class Post extends React.Component
           </div>
         </h1>
         <div className="content">
-          {@props.content.full if this.state.modal}
+          {@props.content.full}
         </div>
       </div>
     </div>

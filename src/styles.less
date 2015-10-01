@@ -1,5 +1,23 @@
 @import (less) "semantic-ui-css/semantic.css";
 
+:focus, :active {
+	outline:0 !important;
+	outline-style: none;
+	outline-color: transparent;
+}
+
+a:link {
+	color: #21ba45;
+}
+
+a:visited {
+	color: #16ab39;
+}
+
+a:hover {
+	border-bottom: 1px solid #21ba45
+}
+
 .primary.heading .name.column {
 	margin-top: 5em;
 	margin-bottom: 3em;
@@ -35,14 +53,31 @@
 	margin-left: 5em;
 	margin-right: 5em;
 }
+
+.ui.tag.label {
+	text-transform: capitalize;
+}
+
 .transparent.icon.input {
 	border-bottom: 1.5px solid black;
 }
 
-.ui.segment {
+.ui.post.segment {
 	box-shadow: none;
+	margin-bottom: 0px;
+	padding: 8px;
+	border: 1px solid #777;
 }
 
-.hovered.ui.segment {
-	box-shadow: 0px 0px 1px 1px #0E6EB8
+.ui.blurb {
+	color: black;
+}
+
+.ui.post.dividing.header {
+	margin-bottom: 6.6px;
+}
+
+.hovered.ui.post.segment {
+	border: 1px solid #21ba45;
+	box-shadow: 0px 0px 1px 0.5px #21ba45;
 }

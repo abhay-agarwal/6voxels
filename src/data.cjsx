@@ -1,10 +1,12 @@
 React = require('react/addons')
 
+images = "images/"
+
 tags = {
-	artistic: "a",
-	professional: "p",
-	academic: "b",
-	independent: "i"
+	artistic: "artistic",
+	professional: "professional",
+	academic: "academic",
+	independent: "independent"
 }
 
 hash = (str) ->
@@ -14,7 +16,7 @@ hash = (str) ->
 	return hash >>> 0
 
 data = {
-	images: "images/",
+	images: images,
 	isotope: {
 	 class: 'stackable',
 	 options: '{"itemSelector":".stackable","layoutMode":"masonry"}'
@@ -31,49 +33,98 @@ data = {
 			full:
 				<div>
 					<h3 className="ui dividing header">Motivation</h3>
-					<p>During my final year of my bachelor's degree at UC Berkeley, I spent time in the Center for Information Technology Research in the Interest of Society (CITRIS) within their <a href="http://citris-uc.org/initiatives/robotics-2">People and Robots Initiative</a> lab.
+					<img className="ui small right floated image" src="images/citris/robot.jpg"></img>
+					<p>During my final year of my bachelor's degree at UC Berkeley, I spent time in the Center for Information Technology Research in the Interest of Society (CITRIS) within their <a href="http://citris-uc.org/initiatives/robotics-2" target="_blank">People and Robots Initiative</a> lab.
 					</p>
-					<p>I had the opportunity to experiment with the NAO humanoid robot, developed by Aldebaran Robotics in France. Our lab purchased three of these NAO robots, which feature child-like actuated limbs capable of around fifty degrees of freedom. Additionally, they are equipped with two cameras (eyes), speakers, several navigational sensors, and a variety of impact sensors placed around their extremities.
+					<p>I had the opportunity to experiment with the <a href="https://www.aldebaran.com/en/humanoid-robot/nao-robot" target="_blank">NAO</a>, a humanoid robot developed by Aldebaran Robotics as a general purpose "platform". Our lab purchased three of these NAO robots, which feature actuated limbs capable of around fifty degrees of freedom. Additionally, they are equipped with two cameras (i.e. eyes), speakers, several navigational sensors, and a variety of impact sensors placed around their extremities.
 					</p>
-					<p>Upon experimenting with the built-in functionality of the NAO robots, I found their basic motor coordination and sensory abilities lacking. For example, minute differences in their leg motors would produce a 'leg dominance' that would quickly hinder proper movement and navigation.
+					<p>Upon experimenting with the built-in functionality of the NAO robots, I found their basic motor coordination and sensory abilities lacking. For example, minute differences in their leg motors would produce a 'leg dominance' that would quickly hinder proper movement and navigation. Furthermore, the onboard system for registering movement did not have a built in strategy for SLAM (simultaneous localization and mapping), rendering the robot unable to understand its position relative to its surroundings.
 					</p>
 					<h3 className="ui dividing header">Project Description</h3>
-					<p>My project with the NAO robots centered around integrating information from their visual sensors to allow the robots to self-adjust their movements and subsequent internal model to physical conditions (research which I carried over to autonomous quadcopters). Using various patterns observed from their visual field (such as corners, edges, etc.), we were able to construct a basic computational understanding of the environment that allowed the robots to self-regulate their movement with regard to these observed 'landmarks'.
+					<img className="ui medium right floated image" src="images/citris/visual.jpg"></img>
+
+					<p>My work with the NAO robots centered around integrating information from their visual sensors to allow the robots to self-adjust their movements and subsequent internal model to physical conditions (research which I subsequently carried over to autonomous quadcopters). Using various patterns observed from their visual field (such as corners, edges, etc.), we were able to construct a basic computational understanding of the environment that allowed the robots to self-regulate their movement with regard to these observed 'landmarks'.
 					</p>
-					<p>Our research produced a thesis written about methods of approximating various distance values to adjust internal constants and produce intelligent movement, as well as a human-interaction mode where the robot was able to follow a predetermined object (in our case a small red ball). As the NAO reached the ball, we enabled it to actually grasp and retrieve the object itself.
+					<p>Our software was able to use progressive-approximation of the distance of a visually significant pattern such as an area of color or pattern. Using a mixture of Kalman filtering, blob detection, and an optimized SLAM model, we were able to construct a rough map of the NAO's surroundings. After implementing our system, a robot with discrepancies in its motors would be able to move straight.
+					</p>
+					<img className="ui large left floated image" src="images/citris/paper.jpg"></img>
+					<p>Our research produced a thesis written about methods of approximating various distance values to adjust internal constants and produce intelligent movement, as well as a human-interaction mode where the robot was able to follow a predetermined object (in our case a red ball of known diameter). As the NAO reached the ball, we enabled it to actually grasp and retrieve the object itself, proving the success of the algorithm.
+					</p>
+					<h3 className="ui dividing header" style={{clear: "both"}}>Further Applications</h3>
+					<p>This project progresses the state of onboard machine intelligence in robots with compact form-factors and the possibly of defective parts. Perhaps future robots will me made from cheaper commodity parts with extremely robust software to detect and manage defects. Due to the NAO's hefty price tag of $15,000 this contributes to the overall accessibility of robots to more affordable environments.
 					</p>
 				</div>
 		},
 		{
-			title: "Denizen",
+			title: "Denizen.io",
 			folder: "denizen",
 			tags: [tags.professional],
 			date: new Date(2014, 9),
 			blurb: "A local media outlet that allows users to create geographically tagged stories and promote other stories in real-time.",
 			full:
 				<div>
-					
-					<p>Around the time I was given funding to travel through Europe, I became interested in the ability of societies to self-organize around local information. This was in part due to my fascination with technology-mediated social movements around the globe, as well as due to my frustration about finding relevant real-time local information.
+					<a href="http://denizen.io" target="_blank"><img className="centered ui image" src="images/denizen/logo.png"></img></a>
+					<h3 className="ui dividing header">Motivation</h3>
+					<img className="ui medium right floated image" src="images/denizen/post.jpg"></img>
+					<p>Around the time that I was given funding to travel through Europe, I developed an interest in the ability of societies to self-organize around local information. This was in part due to my fascination with technologically-mediated social movements around the globe (such as Occupy and the Arab Spring), as well as due to my frustration about finding relevant real-time local information.
 					</p>
-					<p>In the proceeding three months as I traveled from city to city, I realized that this was a much broader issue with communities around the world. As one enters a new city or area, the avenues of local information change or disappear entirely. Information on the web was usually outdated and unreliable, and usually written by other foreigners.
+					<p>In the proceeding three months as I traveled from city to city on my speaking tour, I found this lack of information to be a much broader issue with communities around the world. As one enters a new city or area, the avenues of local information change or disappear entirely. Information on the web was usually outdated and unreliable, and usually written by foreigners.
 					</p>
-					<p>I began to develop a web-based approach to local information sharing that took advantage of the naturally useful properties of maps. I ended up naming it Denizen, and cofounding a company around it with my good friend Collin Buchan.
+					<h3 className="ui dividing header">Project Description</h3>
+					<p>I spent several months developing a web-based approach to local information sharing that took advantage of the naturally useful properties of maps. I named it Denizen, and cofounded it with my close friend Collin Buchan.
 					</p>
 					<p>The application uses a well-tuned real-time geo-querying system that can load information as quickly as the user can pan or zoom the map. The front-end allows a user to upload text, image, video, and audio. Others may promote the content, making it appear to a wider geography of users.
 					</p>
+					<h3 className="ui dividing header">Design Principles</h3>
+					<p>Denizen uses a model of user interaction inspired by Reddit, where content can be 'crowdvoted' in order to naturally promote more interesting information and encourage engagement. The convenient intrinsic properties of maps are exploited whenever possible to create the most seamless experience. When the map is zoomed in, the bubbles separate into individual posts. When zoomed out, less relevant content disappears and the top content surfaces. In this way, the product can be useful at any magnification. When fully zoomed out, the entire world can communicate about the top rated content. When fully zoomed in, content can even be discussed from even within your neighborhood or apartment complex.
+					</p>
+					<h3 className="ui dividing header">Related Initiatives and Projects</h3>
+					<p>This research relates to a variety of other projects, commercial and nonprofit. There are currently several initiatives around the use of the phone number '311' to report municipal issues. Some have suggested that this could constitute an early form of improved civic engagement.
+					</p>
+					<p>Several commercial projects exist to promote local information, with varying degrees of success. The mobile app Foursquare initially succeeded in gaining momentum but was eventually refocused toward restaurant reviews. Other small-scale attempts at developing a 'community' failed, purely due to user aquisition troubles and a lack of a persistent trustworthy community. In that regard, Denizen allowed users to post anonymously in order to allow community awareness projects to cement into the product.
+					</p>
+					<h3 className="ui dividing header">Screenshots</h3>
+					<img className="centered ui image" src="images/denizen/screenshot.jpg"></img>
+					<div className="ui divider"></div>
+					<img className="centered ui image" src="images/denizen/screenshot2.jpg"></img>
+					<div className="ui divider"></div>
+					<img className="centered ui image" src="images/denizen/screenshot3.jpg"></img>
+					<div className="ui divider"></div>
+					<img className="centered ui image" src="images/denizen/screenshot4.jpg"></img>
 				</div>
 		},
 		{
 			title: "You, Online",
-			folder: "you online",
+			folder: "you",
 			tags: [tags.independent],
 			date: new Date(2014, 8),
 			blurb: "A series of public talks on online identity and the future of urban environments.",
 			full:
 				<div>
-					In the spring of 2014, the municipal government of Oakland announced a new initiative by the Oakland police department to integrate police information and private surveillance footage in order to create a sophisticated dashboard of city intelligence. The centerpoint of this initiative was the so-called 'Fusion Center' in which data from public sources such as Twitter as well as feeds from private cameras were stored.
-					While many members of Oakland activist groups used civil disobedience and community organizing tactics to address these developments, I chose to instead create a public forum for discussing how our perceptions of self and society were related to modern technological mediums.
-					After my very first presentation of my talk, which lasted over three hours, I was approached by the founder of a social entrepreneurship nonprofit that offered to help bring my message to a broader audience. He introduced me to his program and eventually funded my voyage to Europe and travel between almost a dozen cities. I delivered the talk for free to a wide variety of groups and social spaces (many termed 'hackerspaces'). I was intrigued by the differences in concerns and ideas between different cities and audiences, as well as their own stories of how technology had radically shaped their lived experience within the last decade.
+					<h3 className="ui dividing header">Description</h3>
+					<p>"You, Online" was a public workshop that I delivered to audiences all over Europe in the summer of 2014. It focused on the variety of issues relating to how the internet and modern technology affect identity and collective organization. It navigated across disciplines of urban studies, politics, computer networking, and social theory. However, the discussion was intentionally open-ended and conversations started in the audience were never inhibited.
+					</p>
+					<img className="centered ui image" src="images/you/slide.jpg"></img>
+					<h3 className="ui dividing header">Background</h3>
+					<p>In the spring of 2014, the municipal government of Oakland announced a new initiative by the Oakland police department to integrate police information and private surveillance footage in order to create a sophisticated dashboard of city intelligence. The centerpoint of this initiative was the so-called 'Fusion Center' in which data from public sources such as Twitter as well as feeds from private cameras were stored.
+					</p>
+					<p>While many members of Oakland activist groups used civil disobedience and community organizing tactics to address these developments, I chose to instead create a public forum for discussing how our perceptions of self and society were related to modern technological mediums.
+					</p>
+					<p>After my very first presentation of my talk, which lasted over three hours, I was approached by the founder of a social entrepreneurship nonprofit that offered to help bring my message to a broader audience. He introduced me to his program and eventually funded my voyage to Europe and travel between almost a dozen cities.
+					</p>
+					<h3 className="ui dividing header">Journey</h3>
+					<img className="ui large right floated image" src="images/you/london.jpg"></img>
+					<p>I delivered the talk for free to a wide variety of groups and social spaces (many termed 'hackerspaces'). In order to promote the talk, I had to translate my flyer into several other languages. Communication between me and potential venues was often difficult and required human or automated translation. In every city that I gave a talk in, the presumptions and goals of the average individual were radically different. A different urban topography lended itself to widely varied experiences, and therefore ideals. Of course, it was fascinating to hear stories of how technology had radically shaped their lived experience within the last decade.
+					</p>
+					<p>Three of my venues were illegally occupied social centers in Spain, France, and Italy. In fact, the day of my talk in Paris, the social center was actually in the middle of a protest between the police and thirty-odd people. My host took me around to a separate hidden entrance in the back where I found the audience ready and waiting.
+					</p>
+					<img className="ui large left floated image" src="images/you/france.jpg"></img>
+					<p>I invented Denizen, my local media platform, while traveling from city to city. I met too many people and friends of friends to count. I am thankful for all the individuals that blindly welcomed me into their spaces, as well as all the people that participated in the discussions with open minds.
+					</p>
+					<p>While I rode trains eastward through Austria to Hungary and Turkey, the irony was not lost on me that a western-raised person was traveling in exactly the opposite direction of the many Middle-Eastern and African refugees escaping hardship and violence in their countries. My American passport provided me a heightened level of citizenship that seemed to bleed into European states. I was free to travel in and out of most countries without any other documents or explanation.
+					</p>
+					<p>It is possible that travel itself will become virtual, and the lived experience that we capture in individually navigating foreign territories may become obsolete with the introduction of instantaneous information. Because of this, I feel extremely privileged to have taken part in an age-old tradition of nomadic expedition and sharing stories with strangers.
+					</p>
 				</div>
 		},
 		{

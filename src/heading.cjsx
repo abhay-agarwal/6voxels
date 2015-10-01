@@ -2,6 +2,8 @@ React = require("react/addons")
 Router = require("react-router")
 {Link} = Router
 
+class Tag extends React.Component
+
 module.exports = React.createClass
   render: () ->
     <div className="primary ui heading">
@@ -13,9 +15,15 @@ module.exports = React.createClass
           </div>
           <div className="three wide column"></div>
           <div className="six wide info column">
-            <div className="ui header">STATEMENT</div>
-            <div className="ui header">BIO</div>
-            <div className="ui header">CONTACT</div>
+            <div className="ui header">
+              <a href="#" onClick={=> $("#statement").modal('show')}>STATEMENT</a>
+            </div>
+            <div className="ui header">
+              <a href="#" onClick={=> $("#bio").modal('show')}>BIO</a>
+            </div>
+            <div className="ui header">
+              <a href="#" onClick={=> $("#contact").modal('show')}>CONTACT</a>
+            </div>
           </div>
         </div>
       </div>
