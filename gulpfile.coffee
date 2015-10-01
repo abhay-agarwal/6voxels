@@ -1,6 +1,9 @@
 gulp = require 'gulp'
 gutil = require 'gulp-util'
 livereload = require 'gulp-livereload'
+changed = require 'gulp-changed'
+resize = require 'gulp-image-resize'
+parallel = require 'concurrent-transform'
 nodemon = require 'gulp-nodemon'
 plumber = require 'gulp-plumber'
 gwebpack = require 'gulp-webpack'
@@ -8,6 +11,7 @@ less = require 'gulp-less'
 postcss = require 'gulp-postcss'
 autoprefixer = require 'autoprefixer-core'
 rimraf = require 'rimraf'
+os = require 'os'
 GLOBAL.Promise = (require 'es6-promise').Promise # to make gulp-postcss happy
 
 src_path = "src"
@@ -72,11 +76,21 @@ gulp.task 'clean', ->
   rimraf.sync(dist_path)
 
 gulp.task 'copy', ->
-  gulp.src("#{src_path}/*.html").pipe(gulp.dest(dist_path))
-  gulp.src("#{img_path}/**/*").pipe(gulp.dest(dist_path + "/#{img_path}"))
-  gulp.src("#{semantic_path}/themes/default/assets/**/*").pipe(gulp.dest("#{dist_path}/themes/default/assets/"))
+  gulp.src("#{src_path}/*.html")
+      .pipe(changed(dist_path))
+      .pipe(gulp.dest(dist_path))
+  gulp.src("#{img_path}/**/*.{jpg,png}")
+      .pipe(changed("#{dist_path}/#{img_path}"))
+      .pipe(parallel(resize({
+        width: 1000,
+        quality: 0.8
+      }), os.cpus().length))
+      .pipe(gulp.dest("#{dist_path}/#{img_path}"))
+  gulp.src("#{semantic_path}/themes/default/assets/**/*")
+      .pipe(changed("#{dist_path}/themes/default/assets/"))
+      .pipe(gulp.dest("#{dist_path}/themes/default/assets/"))
 
-gulp.task 'build', ['clean', 'copy', 'css', 'js']
+gulp.task 'build', ['copy', 'css', 'js']
 
 server_main = "#{src_path}/server.coffee"
 gulp.task 'server', ->
@@ -88,10 +102,11 @@ gulp.task 'server', ->
     env:
       PORT: process.env.PORT or 3000
 
-gulp.task 'default', ['clean', 'copy', 'css', 'server', 'js-dev', 'watch']
+gulp.task 'default', ['copy', 'css', 'server', 'js-dev', 'watch']
 
 gulp.task 'watch', ['copy'], ->
   livereload.listen()
   gulp.watch(["#{dist_path}/**/*"]).on('change', livereload.changed)
   gulp.watch ["#{src_path}/**/*.less"], ['css']
   gulp.watch ["#{src_path}/**/*.html"], ['copy']
+  gulp.watch ["#{img_path}/**/*"], ['copy']
