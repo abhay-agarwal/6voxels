@@ -26,8 +26,8 @@ class Menu extends React.Component
 
   typed: (e) ->
     value = e.target.value
-    return if not value
     @setState({filter: "*", value: value})
+    return if not value
     $(".stack").isotope({filter: ->
       $(this).text().toLowerCase().includes(value.toLowerCase())
     })

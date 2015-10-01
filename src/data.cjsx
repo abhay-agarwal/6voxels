@@ -135,8 +135,31 @@ data = {
 			blurb: "Closed-loop garden that recirculates water through an aquarium fish-tank, providing an immensely reduced environmental footprint.",
 			full:
 				<div>
-					California is in a drought that threatens to wipe out a large portion of the crops and industries that sustain its population.
-					I created an aquaponic garden system that uses scientific principles of
+					<img className="ui large left floated image" src="images/aquaponic/done.jpg"></img>
+					<h3 className="ui dividing header">Motivation</h3>
+					<p>California is in a drought that threatens to wipe out a large portion of the crops and industries that sustain its population. I created an aquaponic garden system that uses a clever chemical process to recirculate water from a hydroponic plant bed to a fish tank and then back to the plant bed. In recirculating the water, an aquaponic system drastically reduces the ecological footprint of the system to about 2-7% of the water use of a traditional growth system.
+					</p>
+					<h3 className="ui dividing header">Background</h3>
+					<p>Aquaponics has roots in ancient civilizations, but only recently has it been studied in depth and optimized for small-scale urban applications. Many different configurations exist, with varying plant and aquatic species.
+					</p>
+					<p>Unlike most modern gardening constructs, aquaponic gardens are feedback systems where changes made to one component will have effects on other components and the future conditions of the entire system. Due to the unpredictable behavior of such oscillating systems, aquaponics is notoriously hard to get right and sustain without careful observation of its conditions. Furthermore, a change in the system (such as imbalanced pH) must be reversed gradually so as to not risk shocking the fish or disrupting the plant cycles.
+					</p>
+					<h3 className="ui dividing header">Implementation</h3>
+					<img className="ui medium right floated image" src="images/aquaponic/roof.jpg"></img>
+					<p>My garden was placed in a makeshift greenhouse made from plastic corrugated sheeting to block wind and trap warmth. A black rigid plastic tray that measured approximately 5' x 2' x 1' was purchased from Home Depot and a blue rain barrel was borrowed from a friend. I used the most common hydroponic medium, <a href="http://www.amazon.com/PLANT-GMC10L-Clay-Pebbles-4mm-16mm/dp/B009LNOZQ2" target="_blank">Hydroton</a>, to fill the tray. I purchased a simple <a href="http://www.amazon.com/EcoPlus-728310-Submersible-Pump-396GPH/dp/B0018X2XT4/ref=sr_1_1?s=lawn-garden&ie=UTF8&qid=1443729076&sr=1-1&keywords=submersible+water+pump" target="_blank">submersible water pump</a> to allow the water to flow from the barrel to the tray.
+					</p>
+					<p>An aquaponic system cannot simply flow the water through the plant bed because the plants would not have the chance to absorb nutrients from the quickly flowing water. Therefore, most systems (including mine) are of the "ebb and flow" variety, where the water sits in the tray for a short while before being automatically dumped out. In order to achieve this without multiple pumps, valves, and a complex electronic circuit, I made a complex S-shaped valve system (similar to the one in an ordinary toilet) to flush out the water after it reached a certain height. By regulating the speed of the water pump, I can effectively control how much time the water sits in the growth bed before overflowing the valve and dumping into the fish tank.
+					</p>
+					<img className="ui medium left floated image" src="images/aquaponic/tube.jpg"></img>
+					<p>Tilapia are generally considered the optimal fish for aquaponic uses because they are resilient to condition changes and the slighly colder water of the Bay Area. However, those same qualities make them an invasive species and are therefore illegal to distribute in California. The next best and cheapest solution im my situation was goldfish. However, care must be taken to maintain a decent pH above 7 for the fish and a general temperature above 75F.
+					</p>
+					<p>I started with six kale starter plants and a thai holy basil plant that purportedly had anti-toxic properties. Unfortunately, the hydroton in the package was extremely pH negative and the water had to be refreshed with pH neutral hose water until the acidity leveled out. Additionally, household baking soda can be added to the water. to similar effect.
+					</p>
+					<h3 className="ui dividing header">Conclusion and Further Developments</h3>
+					<p>My system is still very immature, and many opportunities exist to automate and monitor the system for more optimal outcomes. The feeding of aquaponic fishes is the easiest place for automation. Afterwards, pH and temperature sensors may be placed in the water and automatically controlled with a simple manual regulation via tablespoons of baking soda. The grow light, which is an extra strength halogen lamp, may be regulated to turn on only in periods of low ambient lighting in order to save light. Additionally, it may be turned off for several hours at night while the plants recharge.
+					</p>
+					<p>Overall, aquaponics presents a striking vision of the future of urban ecology. With a fraction of the water consumption and several accessible routes to monitoring and regulation of the system variables, a full ecological system may be created. Additionally, because the fishes can be eventually consumed by humans, the system is also more-or-less nutritionally complete and could provide a balanced system in irregular environments (such as space). This presents some fascinating opportunities for society as well as academia.
+					</p>
 				</div>
 		},
 		{
