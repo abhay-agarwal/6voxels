@@ -5,7 +5,6 @@ Data = require('./data')
 
 class Tag extends React.Component
   render: () ->
-    console.log(@props.active)
     classes = [
         "green" if @props.active == ('.'+@props.name)
         "ui tag label"
@@ -27,8 +26,8 @@ class Menu extends React.Component
   typed: (e) ->
     value = e.target.value
     @setState({filter: "*", value: value})
-    return if not value
     $(".stack").isotope({filter: ->
+      return "*" if not value
       $(this).text().toLowerCase().includes(value.toLowerCase())
     })
 

@@ -22,7 +22,7 @@ module.exports = React.createClass
               <a href="#" onClick={=> $("#bio").modal('show')}>BIO</a>
             </div>
             <div className="ui header">
-              <a href="#" onClick={=> $("#contact").modal('show')}>CONTACT</a>
+              <a href="mailto:abhay.agarwal@berkeley.edu">CONTACT</a>
             </div>
           </div>
         </div>

@@ -6,20 +6,21 @@ Data = require('./data')
 class Post extends React.Component
   constructor: (@props) ->
     super @props
-    @state = {hovered: false, loading: true}
+    @state = {hovered: false, loaded: false}
     @key = Data.hash(@props.content.title)
 
   loaded: () ->
-    @setState({loading: false})
+    @setState({loaded: true})
     $(".stack").isotope()
 
   modal: () ->
     $("#"+@key).modal('show')
+    $("#"+@key+" .ui.embed").embed();
 
   render: () ->
     classes = [
       'hovered' if this.state.hovered
-      'loading' if this.state.loading
+      'loading' if not this.state.loaded
       'ui post segment'
     ].join(' ')
     <div className="#{Data.isotope.class} #{@props.content.tags.join(' ')} column">

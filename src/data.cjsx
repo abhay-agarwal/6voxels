@@ -101,10 +101,10 @@ data = {
 			blurb: "A series of public talks on online identity and the future of urban environments.",
 			full:
 				<div>
-					<h3 className="ui dividing header">Description</h3>
-					<p>"You, Online" was a public workshop that I delivered to audiences all over Europe in the summer of 2014. It focused on the variety of issues relating to how the internet and modern technology affect identity and collective organization. It navigated across disciplines of urban studies, politics, computer networking, and social theory. However, the discussion was intentionally open-ended and conversations started in the audience were never inhibited.
-					</p>
 					<img className="centered ui image" src="images/you/slide.jpg"></img>
+					<h3 className="ui dividing header">Description</h3>
+					<p>"You, Online" was a public workshop that I delivered to audiences all over Europe in the summer of 2014. It focused on the variety of issues relating to how the internet and modern technology affect identity and collective organization. It navigated across disciplines of urban studies, politics, computer networking, and social theory. The discussion was intentionally open-ended and conversations started in the audience were never inhibited.
+					</p>
 					<h3 className="ui dividing header">Background</h3>
 					<p>In the spring of 2014, the municipal government of Oakland announced a new initiative by the Oakland police department to integrate police information and private surveillance footage in order to create a sophisticated dashboard of city intelligence. The centerpoint of this initiative was the so-called 'Fusion Center' in which data from public sources such as Twitter as well as feeds from private cameras were stored.
 					</p>
@@ -128,6 +128,14 @@ data = {
 				</div>
 		},
 		{
+			title: "Quadcopter Semi-Rigid Design",
+			folder: "quadcopter",
+			tags: [tags.academic],
+			date: new Date(2012, 5),
+			blurb: "Designing a cheap and durable quadrotor with adaptive software qualities that respond to imperfections such as vibration.",
+			full: <div>This?</div>
+		},
+		{
 			title: "Aquaponic Garden",
 			folder: "aquaponic",
 			tags: [tags.independent],
@@ -137,7 +145,7 @@ data = {
 				<div>
 					<img className="ui large left floated image" src="images/aquaponic/done.jpg"></img>
 					<h3 className="ui dividing header">Motivation</h3>
-					<p>California is in a drought that threatens to wipe out a large portion of the crops and industries that sustain its population. I created an aquaponic garden system that uses a clever chemical process to recirculate water from a hydroponic plant bed to a fish tank and then back to the plant bed. In recirculating the water, an aquaponic system drastically reduces the ecological footprint of the system to about 2-7% of the water use of a traditional growth system.
+					<p>California is in a drought that threatens to wipe out a large portion of the crops and industries that sustain its population. I created an aquaponic garden system that uses a clever chemical process to recirculate water from a hydroponic plant bed to a fish tank and then back to the plant bed. In recirculating the water, aquaponics drastically reduces the ecological footprint of the system to about 2-7% of the water use of a traditional growth system.
 					</p>
 					<h3 className="ui dividing header">Background</h3>
 					<p>Aquaponics has roots in ancient civilizations, but only recently has it been studied in depth and optimized for small-scale urban applications. Many different configurations exist, with varying plant and aquatic species.
@@ -170,10 +178,16 @@ data = {
 			blurb: "Natural music interface for an experimental car interface device.",
 			full:
 				<div>
-					I worked in one of Sony's headquarters in Shinagawa, Tokyo, to research novel forms of human-computer interaction. Unfortunately, since the heart of my work still functions inside a non-disclosure agreement, I can only speak of my projects broadly and was not allowed to take photos of my final product.
-					One of my projects dealt with a prototype device that was being developed at the time. It was a vehicle-agnostic car-display with an excellent graphics library. My project centered around creating an excellent human-interaction for playing music inside the car. I had full creative autonomy over this project, from concept to implementation and code.
-					I developed an emotive audio-visual interface to the music that used broad gestural sweeps to change the music's 'vibe', as well as and mood-enhancing ambient colors to affect the driver more intimately.
-					The graphics visualization took advantage of the screen's high pixel density to display a multi-dimensional color gradient that adapted to the state of the music. It used a music-processing library to detect the intensity of various frequencies and change its visualization accordingly.
+					<h3 className="ui dividing header">Disclaimer</h3>
+					<p>The work I did for Sony is protected under an NDA, with the exception of a brief overview for portfolio purposes. This description is truncated and images of the final project have been withheld.
+					</p>
+					<h3 className="ui dividing header">Project Description</h3>
+					<p>This project was completed during my role Sony's Human-Computer Interaction department headquartered in Shinagawa, Tokyo. One of the products being developed was a in-car display interface. My project centered around creating a prototype of a novel human-interaction for playing music inside the car. I had full creative autonomy over this project, from concept to implementation and code.
+					</p>
+					<p>In the two-month-long time span, I developed an emotive audio-visual interface to playing music that was designed to create a calmer and more emotionally soothing experience. The listener could use broad gestural sweeps to change the music's 'vibe'. This would be reflected not only in the music but in the color palette of the visualizer and the movement of the on-screen graphics. The visualization produced a multi-dimensional color gradient that adapted to the state of the music in real-time without the use of metadata. By decomposing the frequencies in the music the visualizer could recognize smooth tones versus intense bass or vocals.
+					</p>
+					<p>Overall, this product contributes to a more fluid, empathetic approach to computing that eschews pure functionality for a better overall user experience. The prototype was completed and presented to the management of our division.
+					</p>
 				</div>
 		},
 		{
@@ -184,31 +198,39 @@ data = {
 			blurb: "Product prototype of autonomous distributed infrastructure.",
 			full:
 				<div>
-					As the manager of Mesosphere's 'Growth' team, I was tasked with helping facilitate innovation within Mesosphere's server infrastructure platform. This could relate to any number of areas of innovation to introduce a better experience to managing large-scale server deployments.
-					This product prototype video merges actual functionality of the software with an aspirational interface for datacenter operators.
+					<div className="ui embed" data-source="youtube" data-id="0I6qG9RQUnY"></div>
+					<h3 className="ui dividing header">Project Description</h3>
+					<p>As the manager of Mesosphere's Growth team, I was tasked with helping facilitate innovation within our server infrastructure platform. This could relate to any number of areas of innovation to introduce a better experience for managing large-scale server deployments.
+					</p>
+					<p>I created this video in collaboration with our Chief Marketing Officer to demonstrate actual functionality of the software along with an aspirational interface for datacenter operators. This video distills the last five years of innovation in container and software-defined-datacenter technologies into a package that clearly conveys the value of our product in almost any context.
+					</p>
 				</div>
 		},
 		{
 			title: "Scan. Join. Be Rewarded",
-			folder: "scan join",
+			folder: "scan",
 			tags: [tags.artistic],
 			date: new Date(2012, 5),
 			blurb: "A public art project meant to encourage playful confusion and uncertainty about the urban environment.",
 			full:
 				<div>
-					I am always interested in the potential for people to re-think their everyday life, in a sort of unexpected individual or collective epiphany. I believe that these 'moments' are all around us, and a discerning eye may find immensely transformative ideas all around them. Unfortunately, most of us are locked in a cycle of experience where our senses are shut down to focus on a purely single-minded outcome - our job, our home, our school, etc.
-					Therefore, I often attempt to create public art projects that help people 'pop' out of this cycle and momentarily find a greater truth. In this way, I feel that I am producing the modern day version of a Zen Koan.
-					"Scan. Join. Be Rewarded" originated from the idea that most of technology and society has begun to adopt a minimalist language that often feels akin to Haiku. Indeed, the phrase was pulled quite innocuously from the packaging of a grocery product. I placed the phrase along with a completely ambiguous shape on a small handbill and distributed the handbill around local venues in San Francisco, California.
-					When shown the handbill, most people react with complete confusion. Unable to "find out" the meaning of the phrase and without a tangible thing to pinpoint they start to derive magical explanations. The handbill must be embedded with an NFC tag, some will assert. Some have put their phone to the handbill or done other actions in an attempt to test various hypotheses about how to "scan" such an object. The triangle has vague insinuations to the Illuminati, itself a highly vague idea that lives in collective imagination more so than in reality. To some, the phrase reads as a highly unsettling case of the "implicit voice" in advertising breaking the fourth wall.
+					<img className="centered ui image" src="images/scan/public.jpg"></img>
+					<h3 className="ui dividing header">Motivation</h3>
+					<p>I believe in the potential to make people to re-think their everyday life through surprise or epiphany, similar to the way <em>Satori</em> is used in the Rinzai school of Zen Buddhism. Zen teachers would recite <em>koans</em>, or short stories designed to provoked instant realization in the student as to the true nature of reality.
+					</p>
+					<img className="ui large right floated image" src="images/scan/public2.jpg"></img>
+					<p>Such revelatory moments exist all around us, and a discerning eye may find immensely transformative ideas in every nook of urban life. Unfortunately, most of us are locked in a cycle of experience where our senses are shut down in order to focus on a purely single-minded outcome - our job, our home, our school, etc. I often attempt to create public art projects that help people 'pop' out of this cycle of desensitization to momentarily find a greater truth. In this way, I feel that I am producing the modern day version of a Zen Koan.
+					</p>
+					<h3 className="ui dividing header">Installation</h3>
+					<p>"Scan. Join. Be Rewarded" originated from the idea that most of technology and society has begun to adopt a minimalist language of advertising that often feels akin to Haiku. Indeed, the phrase was pulled quite innocuously from the packaging of a grocery product. I placed the phrase along with a completely arbitrary shape onto a small handbill and distributed the handbill around local venues in San Francisco, California.
+					</p>
+					<p>When shown the handbill, most people react with justified confusion. Unable to discern the true meaning of the phrase and without a tangible product to pinpoint they begin to derive altogether magical explanations. "The handbill must be embedded with an NFC tag," some will assert. Some have put their phone to the handbill or made other gestures in an attempt to test various hypotheses about how to "scan" such an object.
+					</p>
+					<p>In our culture of conspiracy theories, many of us seem to develop a fascination with the uncanny and inexplicable. One of these theories is that an organization exists called the Illuminati that secretly orchestrates our reality on a massive scale, placing hidden clues everywhere. The triangle as a pure symbol seems to carry vague insinuations to the Illuminati, whose logo is the all-seeing eye atop the pyramid.
+					</p>
+					<p>To some, the phrase reads as a highly unsettling case of the "implicit voice" in advertising breaking the fourth wall. Left like an 'emperor without clothes', the phrase loses its meaning and exposes the true schizophrenic nature of the media. While this public project is not meant to scare anyone or expose hypocrisy, no interpretation is incorrect, and any meaning that we choose to apply is a mirror into our own mental universe.
+					</p>
 				</div>
-		},
-		{
-			title: "Quadcopter Semi-Rigid Design",
-			folder: "quadcopter",
-			tags: [tags.academic],
-			date: new Date(2012, 5),
-			blurb: "Designing a cheap and durable quadrotor with adaptive software qualities that respond to imperfections such as vibration.",
-			full: <div>This?</div>
 		},
 		{
 			title: "Antifa",
@@ -224,7 +246,19 @@ data = {
 			tags: [tags.professional],
 			date: new Date(2012, 5),
 			blurb: "Connected home-theater prototype that allowed a person to interact seamlessly between their television, soundsystem, phone, and internet.",
-			full: <div>This?</div>
+			full:
+				<div>
+					<h3 className="ui dividing header">Disclaimer</h3>
+					<p>The work I did for Sony is protected under an NDA, with the exception of a brief overview for portfolio purposes. This description is truncated and images of the final project have been withheld.
+					</p>
+					<h3 className="ui dividing header">Project Description</h3>
+					<p>This project was completed during my role Sony's Human-Computer Interaction department headquartered in Shinagawa, Tokyo. One of the products being developed was a complete approach to home theater automation that connected the devices in the living room to create a smooth seamless experience that could easily switch between different forms of entertainment.
+					</p>
+					<p>In the one-month-long time span, I developed a web browser extension that would allow websites to request permission to control home theater devices over a new protocol called UPnP (which Sony predictively implemented on all their home theater devices). This would allow a user to seamless switch between activities such as web browsing to using their home theater or for applications to control both modalities. Additionally, I developed a prototype of a "universal mobile remote" that could display contextual remote controls depending on the device (which it would automatically detect). In this way, the home theater would become a single unit that could adaptively play slideshows, music, movies, and web content easily. This could turn web browsing into a more sensory or collaborative experience.
+					</p>
+					<p>This entire prototype required no special hardware other than the various standard Sony products or other compatible UPnP-enabled hardware. I created the design and code myself. A prototype of the end-to-end experience was completed in less than a month and presented to the management of my division.
+					</p>
+				</div>
 		},
 		{
 			title: "Crew",
