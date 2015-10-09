@@ -11,10 +11,10 @@ Post = require('./post')
 
 Home = React.createClass
   render: ->
-    <div className="main container">
+    <div className="ui main container">
       <div className="js-isotope stack" data-isotope-options={Data.isotope.options}>
         <div className="doubling three column ui grid">
-          {<Post content={content} key={content.folder}/> for content in Data.posts}
+          {<Post content={content} key={content.cover}/> for content in Data.posts}
         </div>
       </div>
     </div>

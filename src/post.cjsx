@@ -30,7 +30,7 @@ class Post extends React.Component
              onMouseOut={=> @setState({hovered: false})}
              >
           <img className="ui fluid image"
-               src="#{Data.images}#{@props.content.folder}/intro.jpg"
+               src="#{@props.content.cover}"
                onLoad={=> @loaded()}/>
           <div className="ui description container" style={{"marginTop": "1rem"}}>
             <div className="ui dividing header">{@props.content.title}</div>

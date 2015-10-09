@@ -26,7 +26,7 @@ data = {
 	posts: [
 		{
 			title: "CITRIS Personal Robots",
-			folder: "citris",
+			cover: "images/citris/intro.jpg",
 			tags: [tags.academic],
 			date: new Date(2012, 5),
 			blurb: "Improving the expressiveness and functionality of humanoid robots through adaptive software mechanisms.",
@@ -51,16 +51,16 @@ data = {
 					<p>Our research produced a thesis written about methods of approximating various distance values to adjust internal constants and produce intelligent movement, as well as a human-interaction mode where the robot was able to follow a predetermined object (in our case a red ball of known diameter). As the NAO reached the ball, we enabled it to actually grasp and retrieve the object itself, proving the success of the algorithm.
 					</p>
 					<h3 className="ui dividing header" style={{clear: "both"}}>Further Applications</h3>
-					<p>This project progresses the state of onboard machine intelligence in robots with compact form-factors and the possibly of defective parts. Perhaps future robots will me made from cheaper commodity parts with extremely robust software to detect and manage defects. Due to the NAO's hefty price tag of $15,000 this contributes to the overall accessibility of robots to more affordable environments.
+					<p>This project progresses the state of onboard machine intelligence in robots that possess compact form-factors and cheap parts. Perhaps future robots will be made from cheaper commodity parts with extremely robust software to detect and manage defects. Due to the NAO's current hefty price tag of $15,000 this contributes to the overall accessibility of robots to more affordable environments.
 					</p>
 				</div>
 		},
 		{
 			title: "Denizen.io",
-			folder: "denizen",
+			cover: "images/denizen/intro.jpg",
 			tags: [tags.professional],
 			date: new Date(2014, 9),
-			blurb: "A local media outlet that allows users to create geographically tagged stories and promote other stories in real-time.",
+			blurb: "A local media platform that allows users to create geographically tagged stories and promote other stories in real-time.",
 			full:
 				<div>
 					<a href="http://denizen.io" target="_blank"><img className="centered ui image" src="images/denizen/logo.png"></img></a>
@@ -95,7 +95,7 @@ data = {
 		},
 		{
 			title: "You, Online",
-			folder: "you",
+			cover: "images/you/intro.jpg",
 			tags: [tags.independent],
 			date: new Date(2014, 8),
 			blurb: "A series of public talks on online identity and the future of urban environments.",
@@ -103,7 +103,7 @@ data = {
 				<div>
 					<img className="centered ui image" src="images/you/slide.jpg"></img>
 					<h3 className="ui dividing header">Description</h3>
-					<p>"You, Online" was a public workshop that I delivered to audiences all over Europe in the summer of 2014. It focused on the variety of issues relating to how the internet and modern technology affect identity and collective organization. It navigated across disciplines of urban studies, politics, computer networking, and social theory. The discussion was intentionally open-ended and conversations started in the audience were never inhibited.
+					<p>"You, Online" was a public workshop that I delivered to audiences all over Europe in the summer of 2014. It focused on a variety of issues related the internet and the way that modern technology affects identity and collective organization. It navigated across disciplines of urban studies, politics, computer networking, and social theory. The discussion was intentionally open-ended and conversations started in the audience were never inhibited.
 					</p>
 					<h3 className="ui dividing header">Background</h3>
 					<p>In the spring of 2014, the municipal government of Oakland announced a new initiative by the Oakland police department to integrate police information and private surveillance footage in order to create a sophisticated dashboard of city intelligence. The centerpoint of this initiative was the so-called 'Fusion Center' in which data from public sources such as Twitter as well as feeds from private cameras were stored.
@@ -118,26 +118,44 @@ data = {
 					</p>
 					<p>Three of my venues were illegally occupied social centers in Spain, France, and Italy. In fact, the day of my talk in Paris, the social center was actually in the middle of a protest between the police and thirty-odd people. My host took me around to a separate hidden entrance in the back where I found the audience ready and waiting.
 					</p>
-					<img className="ui large left floated image" src="images/you/france.jpg"></img>
 					<p>I invented Denizen, my local media platform, while traveling from city to city. I met too many people and friends of friends to count. I am thankful for all the individuals that blindly welcomed me into their spaces, as well as all the people that participated in the discussions with open minds.
 					</p>
+					<img className="ui large left floated image" src="images/you/france.jpg"></img>
 					<p>While I rode trains eastward through Austria to Hungary and Turkey, the irony was not lost on me that a western-raised person was traveling in exactly the opposite direction of the many Middle-Eastern and African refugees escaping hardship and violence in their countries. My American passport provided me a heightened level of citizenship that seemed to bleed into European states. I was free to travel in and out of most countries without any other documents or explanation.
 					</p>
-					<p>It is possible that travel itself will become virtual, and the lived experience that we capture in individually navigating foreign territories may become obsolete with the introduction of instantaneous information. Because of this, I feel extremely privileged to have taken part in an age-old tradition of nomadic expedition and sharing stories with strangers.
+					<p>It is possible that travel itself will become virtual, and the lived experience that we capture in individually navigating foreign territories may become obsolete with the introduction of instantaneous information. I feel extremely privileged to have still taken part in the age-old tradition of nomadic expedition.
 					</p>
 				</div>
 		},
 		{
 			title: "Quadcopter Semi-Rigid Design",
-			folder: "quadcopter",
+			cover: "images/quadcopter/intro.jpg",
 			tags: [tags.academic],
 			date: new Date(2012, 5),
 			blurb: "Designing a cheap and durable quadrotor with adaptive software qualities that respond to imperfections such as vibration.",
-			full: <div>This?</div>
+			full:
+				<div>
+					<h3 className="ui dividing header">Description</h3>
+					<img className="ui small right floated image" src="images/quadcopter/assembled.jpg"></img>
+					<p>As part of my embedded systems work with <a href="http://ptolemy.eecs.berkeley.edu/~eal/" target="_blank">Edward Lee</a> I worked on a collaborative effort to build and program robust on-board control software for complex mechatronic systems. One such system that is heavily studied is the quadcopter, which is usually designed using rigid materials. Even though a more flexible frame may benefit the overall durability of the system in the case of impact, such lightweight materials carry the risk of excessive vibration. Our system was able to overcome such limitations using a more complex onboard control system and better sensor sampling (to eliminate false frequencies with request to the Nyquist freqency).
+					</p>
+					<h3 className="ui dividing header">Initial Designs</h3>
+					<img className="ui small left floated image" src="images/quadcopter/frame.jpg"></img>
+					<p>Our initial research focused on the construction of the material itself to use purely designed properties to mitigate vibration. Such research focused on the easy of design due to the rapid ubiquity of 3-D printing. Our printed material was ABS plastic, which is a common material in industrial applications and semi-flexible. We started with a dense printing profile but we expanded to lighter-weight hex patterns later on.
+					</p>
+					<img className="ui small right floated image" src="images/quadcopter/board.jpg"></img>
+					<p>We developed our own circuit board layout in order to fully control the properties and shape of the completed product. We used several commodity parts that are already cheaply mass produced. We used an <a href="http://www.digi.com/products/xbee-rf-solutions/modules/xbee-zigbee" target="_blank">Xbee ZigBee RF microcontroller</a> to communicate data back to our machine. We used a more expensive <a href="https://www.sparkfun.com/products/10736" target="_blank">9DOF Razor IMU (Inertial Measurement Unit)</a>. A high sampling rate in the IMU was crucial to the algorithm we implemented.
+					</p>
+					<h3 className="ui dividing header">Research</h3>
+					<p>We experimented with several material types and were able to sense frequencies of vibration from the IMU in the quadcopter. Vibration frequently would destabilize the quadcopter in higher power and sometimes prevented the quadcopter from correctly lifting off at all. A naive PID controller while possibly sufficient was simply too brittle to provide competent mechatronic control.
+					</p>
+					<p>We designed an updated control algorithm that sensed the frequency of vibration and created a differential in the relevant motor and opposite motor to mitigate the overall motion of the quadrotor helicopter. Our code yielded a higher stability in the final quadrotor motion. Additionally, we were able to sense these motions in an arbitrary material density using the pure readings from our IMU. This contributed to the overall robustness of a given quadcopter system regardless of its construction.
+					</p>
+				</div>
 		},
 		{
 			title: "Aquaponic Garden",
-			folder: "aquaponic",
+			cover: "images/aquaponic/intro.jpg",
 			tags: [tags.independent],
 			date: new Date(2015, 6),
 			blurb: "Closed-loop garden that recirculates water through an aquarium fish-tank, providing an immensely reduced environmental footprint.",
@@ -163,7 +181,7 @@ data = {
 					</p>
 					<p>I started with six kale starter plants and a thai holy basil plant that purportedly had anti-toxic properties. Unfortunately, the hydroton in the package was extremely pH negative and the water had to be refreshed with pH neutral hose water until the acidity leveled out. Additionally, household baking soda can be added to the water. to similar effect.
 					</p>
-					<h3 className="ui dividing header">Conclusion and Further Developments</h3>
+					<h3 className="ui dividing header" style={{"clear":"both"}}>Conclusion and Further Developments</h3>
 					<p>My system is still very immature, and many opportunities exist to automate and monitor the system for more optimal outcomes. The feeding of aquaponic fishes is the easiest place for automation. Afterwards, pH and temperature sensors may be placed in the water and automatically controlled with a simple manual regulation via tablespoons of baking soda. The grow light, which is an extra strength halogen lamp, may be regulated to turn on only in periods of low ambient lighting in order to save light. Additionally, it may be turned off for several hours at night while the plants recharge.
 					</p>
 					<p>Overall, aquaponics presents a striking vision of the future of urban ecology. With a fraction of the water consumption and several accessible routes to monitoring and regulation of the system variables, a full ecological system may be created. Additionally, because the fishes can be eventually consumed by humans, the system is also more-or-less nutritionally complete and could provide a balanced system in irregular environments (such as space). This presents some fascinating opportunities for society as well as academia.
@@ -172,7 +190,7 @@ data = {
 		},
 		{
 			title: "Sony Car Interface Prototype",
-			folder: "sony car",
+			cover: "images/sony car/intro.jpg",
 			tags: [tags.professional],
 			date: new Date(2011, 7),
 			blurb: "Natural music interface for an experimental car interface device.",
@@ -184,15 +202,15 @@ data = {
 					<h3 className="ui dividing header">Project Description</h3>
 					<p>This project was completed during my role Sony's Human-Computer Interaction department headquartered in Shinagawa, Tokyo. One of the products being developed was a in-car display interface. My project centered around creating a prototype of a novel human-interaction for playing music inside the car. I had full creative autonomy over this project, from concept to implementation and code.
 					</p>
-					<p>In the two-month-long time span, I developed an emotive audio-visual interface to playing music that was designed to create a calmer and more emotionally soothing experience. The listener could use broad gestural sweeps to change the music's 'vibe'. This would be reflected not only in the music but in the color palette of the visualizer and the movement of the on-screen graphics. The visualization produced a multi-dimensional color gradient that adapted to the state of the music in real-time without the use of metadata. By decomposing the frequencies in the music the visualizer could recognize smooth tones versus intense bass or vocals.
+					<p>In the two-month-long time span, I developed an emotive audio-visual interface to playing music. It was designed to create a calmer and more emotionally soothing experience to the user in order to mitigate the stress of driving. The listener could use broad gestural sweeps to change the music's 'vibe'. This would be reflected not only in the music but in the color palette of the visualizer and the movement of the on-screen graphics. The visualization produced a multi-dimensional color gradient that adapted to the state of the music in real-time without the use of metadata. By decomposing the frequencies in the music the visualizer could recognize smooth tones versus intense bass or vocals. Due to the brightness of the screen, the visualizer effectively emitted its colors to the interior of the car. In night-time environments this effect may be especially pronounced.
 					</p>
-					<p>Overall, this product contributes to a more fluid, empathetic approach to computing that eschews pure functionality for a better overall user experience. The prototype was completed and presented to the management of our division.
+					<p>Overall, this product contributes to a more fluid, empathetic approach to computing. It eschews pure functionality for a better overall user experience. The prototype was completed and presented to the management of our division in August 2011.
 					</p>
 				</div>
 		},
 		{
 			title: "Mesosphere Product Prototype",
-			folder: "mesosphere",
+			cover: "images/mesosphere/intro.jpg",
 			tags: [tags.professional],
 			date: new Date(2015, 5),
 			blurb: "Product prototype of autonomous distributed infrastructure.",
@@ -200,7 +218,7 @@ data = {
 				<div>
 					<div className="ui embed" data-source="youtube" data-id="0I6qG9RQUnY"></div>
 					<h3 className="ui dividing header">Project Description</h3>
-					<p>As the manager of Mesosphere's Growth team, I was tasked with helping facilitate innovation within our server infrastructure platform. This could relate to any number of areas of innovation to introduce a better experience for managing large-scale server deployments.
+					<p>As the manager of Mesosphere's Growth team, I was tasked with facilitating innovation within our server infrastructure platform. This could relate to any number of areas of innovation to introduce a better experience for managing large-scale server deployments.
 					</p>
 					<p>I created this video in collaboration with our Chief Marketing Officer to demonstrate actual functionality of the software along with an aspirational interface for datacenter operators. This video distills the last five years of innovation in container and software-defined-datacenter technologies into a package that clearly conveys the value of our product in almost any context.
 					</p>
@@ -208,7 +226,7 @@ data = {
 		},
 		{
 			title: "Scan. Join. Be Rewarded",
-			folder: "scan",
+			cover: "images/scan/intro.jpg",
 			tags: [tags.artistic],
 			date: new Date(2012, 5),
 			blurb: "A public art project meant to encourage playful confusion and uncertainty about the urban environment.",
@@ -224,17 +242,39 @@ data = {
 					<h3 className="ui dividing header">Installation</h3>
 					<p>"Scan. Join. Be Rewarded" originated from the idea that most of technology and society has begun to adopt a minimalist language of advertising that often feels akin to Haiku. Indeed, the phrase was pulled quite innocuously from the packaging of a grocery product. I placed the phrase along with a completely arbitrary shape onto a small handbill and distributed the handbill around local venues in San Francisco, California.
 					</p>
-					<p>When shown the handbill, most people react with justified confusion. Unable to discern the true meaning of the phrase and without a tangible product to pinpoint they begin to derive altogether magical explanations. "The handbill must be embedded with an NFC tag," some will assert. Some have put their phone to the handbill or made other gestures in an attempt to test various hypotheses about how to "scan" such an object.
+					<p>When shown the handbill, most people react with justified confusion. Unable to discern the true meaning of the phrase and without a stable interpretation, a passerby will start to derive altogether magical explanations. "The handbill must be embedded with an NFC tag," some will assert. Some have put their phone to the handbill or made other gestures in an attempt to test various hypotheses about how to "scan" such an object.
 					</p>
-					<p>In our culture of conspiracy theories, many of us seem to develop a fascination with the uncanny and inexplicable. One of these theories is that an organization exists called the Illuminati that secretly orchestrates our reality on a massive scale, placing hidden clues everywhere. The triangle as a pure symbol seems to carry vague insinuations to the Illuminati, whose logo is the all-seeing eye atop the pyramid.
+					<p>In our culture of conspiracy theories, many of us seem to develop a fascination with the uncanny and inexplicable. One of these theories concerns the "Illuminati", a shadow organization that secretly orchestrates our reality on a massive scale, placing hidden clues everywhere. The triangle as a pure symbol seems to carry vague insinuations to the Illuminati, whose logo is the all-seeing eye atop the pyramid.
 					</p>
-					<p>To some, the phrase reads as a highly unsettling case of the "implicit voice" in advertising breaking the fourth wall. Left like an 'emperor without clothes', the phrase loses its meaning and exposes the true schizophrenic nature of the media. While this public project is not meant to scare anyone or expose hypocrisy, no interpretation is incorrect, and any meaning that we choose to apply is a mirror into our own mental universe.
+					<p>To some, the phrase reads as a highly unsettling case of the "implicit voice" in advertising breaking the fourth wall. The phrase is left like an emperor without clothes, exposing the true schizophrenic nature of the media. While this public project is not meant to scare anyone or expose hypocrisy, no interpretation is incorrect, and any meaning that we choose to apply is a mirror into our own mental universe.
 					</p>
 				</div>
 		},
 		{
 			title: "Antifa",
-			folder: "antifa",
+			cover: "images/antifa/intro.jpg",
+			tags: [tags.artistic],
+			date: new Date(2012, 5),
+			blurb: "Part of a series of imaginary brands that question the impact of advertising and lifestyle media.",
+			full:
+				<div>
+					<h3 className="ui dividing header">Background</h3>
+					<img className="ui large bordered right floated image" src="images/antifa/antifa.jpg"></img>
+					<p>Many of my artworks speak to an idea that French philosopher Jean Baudrillard terms the "simulation", the notion that our society has become so obsessed with image that we live in a "hyperreality" where reality is intertwined with the images of branding and the media, and where irony and parody take the place of truth.
+					</p>
+					<h3 className="ui dividing header">Antifa</h3>
+					<p>The motivation for Antifa is a direct question: what if political activism were a permanent lifestyle fixation that became a shell without a radical center? Many activists commonly focus on the "commoditization" of radical politics, but what if political action were itself an attempt to portray an image of radicalization without a true desire to engage social issues?
+					</p>
+					<p>Antifa takes place as a series of public works that mimic brand imagery to create a persistent narrative. As is the case with most of my art, the narrative lives mostly in the false constructions of the viewer, who, forced with the assumption that 'Antifa' is a brand, creates magical explanations for its existence. Crucially, this brand may not be a traditional economic brand, but may also be a brand of politics, art, or lifestyle. It is important to recognize that brands can live anywhere, including the digital world. Since our society is now aware of that fact, an artist has the opportunity to pull the rug from underneath, leaving the shell of this brand as clues around the urban landscape. The viewer may always rightly assume that the "true meaning" of this art lives elsewhere, never allowing the art to function as an end in itself. This is the essential paradox of media in the digital age.
+					</p>
+					<p>Antifa poises itself as an organization against all things: fame, fashion, fakeness, fascism. It conflates the horrors of nazi torture with the banality of social opinion. It uses a silly linguistic scheme that calls into questions its allegiance to anything at all. Was this an idea brashly conceived in a boardroom of bored marketing professionals? Was it a youthful creative group? Or is it the work of a violent underground radical organization intent on destroying civilization from the ground up?
+					</p>
+					<img className="ui bordered centered image" src="images/antifa/history.jpg"></img>
+				</div>
+		},
+		{
+			title: "Crew",
+			cover: "images/crew/intro.jpg",
 			tags: [tags.artistic],
 			date: new Date(2012, 5),
 			blurb: "Part of a series of imaginary brands that question the impact of advertising and lifestyle media.",
@@ -242,7 +282,7 @@ data = {
 		},
 		{
 			title: "Sony Home Theater Prototype",
-			folder: "sony home",
+			cover: "images/sony home/intro.jpg",
 			tags: [tags.professional],
 			date: new Date(2012, 5),
 			blurb: "Connected home-theater prototype that allowed a person to interact seamlessly between their television, soundsystem, phone, and internet.",
@@ -261,16 +301,8 @@ data = {
 				</div>
 		},
 		{
-			title: "Crew",
-			folder: "crew",
-			tags: [tags.artistic],
-			date: new Date(2012, 5),
-			blurb: "Part of a series of imaginary brands that question the impact of advertising and lifestyle media.",
-			full: <div>This?</div>
-		},
-		{
 			title: "E",
-			folder: "e",
+			cover: "images/e/intro.jpg",
 			tags: [tags.artistic],
 			date: new Date(2012, 5),
 			blurb: "Part of a series of imaginary brands that question the impact of advertising and lifestyle media.",
@@ -278,7 +310,7 @@ data = {
 		},
 		{
 			title: "6 Voxels of Separation",
-			folder: "6 voxels",
+			cover: "images/6 voxels/intro.jpg",
 			tags: [tags.professional],
 			date: new Date(2012, 5),
 			blurb: "My freelance projects live under this moniker.",
@@ -286,7 +318,7 @@ data = {
 		},
 		{
 			title: "Pareidolia",
-			folder: "pareidolia",
+			cover: "images/pareidolia/intro.jpg",
 			tags: [tags.artistic],
 			date: new Date(2012, 5),
 			blurb: "Musical noise-art recordings that use analog feedback and unusual samples to create unique generative sounds.",
@@ -294,7 +326,7 @@ data = {
 		},
 		{
 			title: "Fourier Analysis of Rotational Fluid Flow",
-			folder: "couette taylor",
+			cover: "images/couette taylor/intro.jpg",
 			tags: [tags.academic],
 			date: new Date(2012, 5),
 			blurb: "Studying the time and frequency domain of rotational flow in both homogeneous and gradient density fluids, with applications to manufacturing and plantary atmospheric research.",
