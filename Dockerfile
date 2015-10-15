@@ -6,4 +6,6 @@ WORKDIR /srv
 
 RUN npm install
 
+EXPOSE 3000
+
 CMD node_modules/.bin/gulp server

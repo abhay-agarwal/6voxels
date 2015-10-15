@@ -28,7 +28,6 @@ data = {
 			title: "Aquaponic Garden",
 			cover: "images/aquaponic/intro.jpg",
 			tags: [tags.independent],
-			date: new Date(2015, 6),
 			blurb: "Closed-loop garden that recirculates water through an aquarium fish-tank, providing an immensely reduced environmental footprint.",
 			full:
 				<div>
@@ -63,7 +62,6 @@ data = {
 			title: "Denizen.io",
 			cover: "images/denizen/intro.jpg",
 			tags: [tags.professional],
-			date: new Date(2014, 9),
 			blurb: "A local media platform that allows users to create geographically tagged stories and promote other stories in real-time.",
 			full:
 				<div>
@@ -101,7 +99,6 @@ data = {
 			title: "You, Online",
 			cover: "images/you/intro.jpg",
 			tags: [tags.independent],
-			date: new Date(2014, 8),
 			blurb: "A series of public talks on online identity and the future of urban environments.",
 			full:
 				<div>
@@ -135,7 +132,6 @@ data = {
 			title: "CITRIS Personal Robots",
 			cover: "images/citris/intro.jpg",
 			tags: [tags.academic],
-			date: new Date(2012, 5),
 			blurb: "Improving the expressiveness and functionality of humanoid robots through adaptive software mechanisms.",
 			full:
 				<div>
@@ -166,7 +162,6 @@ data = {
 			title: "Quadcopter Semi-Rigid Design",
 			cover: "images/quadcopter/intro.jpg",
 			tags: [tags.academic],
-			date: new Date(2012, 5),
 			blurb: "Designing a cheap and durable quadrotor with adaptive software qualities that respond to imperfections such as vibration.",
 			full:
 				<div>
@@ -192,7 +187,6 @@ data = {
 			title: "Mesosphere Product Prototype",
 			cover: "images/mesosphere/intro.jpg",
 			tags: [tags.professional],
-			date: new Date(2015, 5),
 			blurb: "Product prototype of autonomous distributed infrastructure.",
 			full:
 				<div>
@@ -208,7 +202,6 @@ data = {
 			title: "Sony Car Interface Prototype",
 			cover: "images/sony car/intro.jpg",
 			tags: [tags.professional],
-			date: new Date(2011, 7),
 			blurb: "Natural music interface for an experimental car interface device.",
 			full:
 				<div>
@@ -228,7 +221,6 @@ data = {
 			title: "Sony Home Theater Prototype",
 			cover: "images/sony home/intro.jpg",
 			tags: [tags.professional],
-			date: new Date(2012, 5),
 			blurb: "Connected home-theater prototype that allowed a person to interact seamlessly between their television, soundsystem, phone, and internet.",
 			full:
 				<div>
@@ -248,7 +240,6 @@ data = {
 			title: "Scan. Join. Be Rewarded",
 			cover: "images/scan/intro.jpg",
 			tags: [tags.artistic],
-			date: new Date(2012, 5),
 			blurb: "A public art project meant to encourage playful confusion and uncertainty about the urban environment.",
 			full:
 				<div>
@@ -274,7 +265,6 @@ data = {
 			title: "Antifa",
 			cover: "images/antifa/intro.jpg",
 			tags: [tags.artistic],
-			date: new Date(2012, 5),
 			blurb: "Part of a series of public artworks investigating the impact of advertising and lifestyle media on urban society.",
 			full:
 				<div>
@@ -297,7 +287,6 @@ data = {
 			title: "Crew",
 			cover: "images/crew/intro.jpg",
 			tags: [tags.artistic],
-			date: new Date(2012, 5),
 			blurb: "Part of a series of public artworks investigating the impact of advertising and lifestyle media on urban society.",
 			full:
 				<div>
@@ -325,7 +314,6 @@ data = {
 			title: "E",
 			cover: "images/e/intro.jpg",
 			tags: [tags.artistic],
-			date: new Date(2012, 5),
 			blurb: "Part of a series of public artworks investigating the impact of advertising and lifestyle media on urban society.",
 			full:
 				<div>
@@ -349,23 +337,22 @@ data = {
 			title: "Limelighter",
 			cover: "images/limelighter/interface.jpg",
 			tags: [tags.independent],
-			date: new Date(2014, 3),
 			blurb: "A browser extension that allows you to highlight the web like a textbook.",
 			full:
 				<div>
 					<h3 className="ui dividing header">Description</h3>
 					<img className="ui small left floated image" src="images/limelighter/limelighter.png"></img>
-					<p>Limelighter is a broswer extension that allows anyone to 'highlight' the web like the page of a textbook. The limelighter buttom allows you to select passages of text and highlight them in different colors. These highlights persist in your limelighter history forever, allowing you to keep a persistent record of your favorite text blurbs and components of web pages. The product also has a social component that allows you to browse the most highlighted portions of web-pages, filtered by date and category.
+					<p>Limelighter is a broswer extension that allows anyone to 'highlight' the web like pages of a textbook. The limelighter button allows you to select passages of text and highlight them in different colors. These highlights remain in your limelighter history forever, allowing you to keep a persistent record of your favorite text blurbs and components of the web. Limelighter additionally contains a social component that allows you to browse the most highlighted passages across all users, filtered by date or category.
 					</p>
 					<h3 className="ui dividing header">Interface</h3>
 					<img className="ui large right floated image" src="images/limelighter/interface.jpg"></img>
-					<p>Each webpage can be highlighted using a natural text selection interaction. These highlights may then be right-clicked to show sharing options. Any computer with Limelighter that is logged in to the same account will provide your highlights, creating a fluid end-to-end experience.
+					<p>Each webpage can be highlighted using a special 'highlighter' cursor. These highlights may then be right-clicked and shared or e-mailed. Your highlights will be synced across all machines that are logged into the the same Limelighter account, creating a fluid end-to-end experience.
 					</p>
-					<p>Limelighter contains a dedicated interface that appears as a dropdown and contains your recent highlights as well as the most trending recent highlights from around the web. Limelighter also provides a website that users could log-in to in order to view their complete history and share their highlights on social media.
+					<p>Limelighter contains a dedicated dropdown interface that shows your recent highlights as well as the most trending recent highlights from around the web. Limelighter also provides a website to let users view their complete history and share their highlights on social media.
 					</p>
-					<p>As the sole technical member of the team, I was resposible for the entire end-to-end stack of technologies involved, from the webpage-parsing technique, to the persistence and caching strategies. This experience provided me the opportunity to grow as a team-member and a technical innovator.
+					<p>As the sole technical member of the team, I was resposible for the full stack of technologies involved, from the webpage-parsing front-end, to the database and syncing mechanism. This experience allowed me the freedom to grow as a team-member and a technical innovator. Most of the work was done in a roughly four-month time period working part-time remotely in California then Europe.
 					</p>
-					<p>As a free product, Limelighter had the challenge of monitizing its product. Ultimately our goal was to sell the technology and brand to large companies who were vying for increased user retention. However, our product was also designed as a marketing tool that allowed website administrators to monitor the quantity of user engagement on their content as well as to better understand the interests of their readers.
+					<p>As a freely available software, Limelighter had the challenge of monitizing its product. Ultimately our goal was to sell the technology and brand to large companies who wanted to increase user engagement. However, our product was also designed as a marketing tool that allowed website administrators to monitor the quantity of user engagement on their content and better understand the interests of their readers.
 					</p>
 				</div>
 		},
@@ -373,13 +360,12 @@ data = {
 			title: "Fourier Analysis of Gradient Density Rotational Fluid Flow",
 			cover: "images/couette/intro.jpg",
 			tags: [tags.academic],
-			date: new Date(2012, 5),
 			blurb: "Studying the time and frequency domain of rotational flow in both homogeneous and gradient density fluids, with applications to manufacturing and plantary atmospheric research.",
 			full:
 				<div>
 					<h3 className="ui dividing header">Description</h3>
 					<img className="ui large right floated image" src="images/couette/diagram.jpg"></img>
-					<h5 className="ui header">You may find the published paper <a href="ext/CouetteTaylor.pdf" target="_blank">here</a></h5>
+					<h5 className="ui header">You may find the published papers <a href="ext/Rodenborn_Talk.pdf" target="_blank">here</a> and <a href="ext/CouetteTaylor.pdf" target="_blank">here</a>.</h5>
 					<p>The Couette-Taylor apparatus is a well-studied system in fluid dynamics because it presents a mathematically elegant system of equations for the fluid inside, as well as a set of specific operational states where the descent into turbulence can be easily and repeatedly observed.
 					</p>
 					<p>This apparatus works by placing water in the gap between two independently rotating concentric cylinders. The cylinders are mathematically assumed to be infinitely long in order to minimize the impact of edge effects. Additionally, the system is assumed to be 'non-slipping', i.e. the velocity of water touching each cylinder is assumed to travel at the exact velocity of that cylinder. These assumptions have been experimentally validated.
@@ -401,15 +387,22 @@ data = {
 					<p>Due to the 'banding' vortices produced by the Couette-Taylor system, a gradient density fluid remains fairly stable for an extended time. Mixing of the fluid only happens at faster, more turbulent flows. Therefore, our research supports the empirical observations that banded fluid vortices persist in large-scale systems such as planetary atmospheres. Our research also presents a highly affordable experimental mechanism for research that may be employed at universities around the world.
 					</p>
 				</div>
-		}#,
-		# {
-		# 	title: "Pareidolia",
-		# 	cover: "images/pareidolia/intro.jpg",
-		# 	tags: [tags.artistic],
-		# 	date: new Date(2012, 5),
-		# 	blurb: "Musical noise-art recordings that use analog feedback and unusual samples to create unique generative sounds.",
-		# 	full: <div>This?</div>
-		# }
+		},
+		{
+			title: "Pareidolia",
+			cover: "images/pareidolia/intro.jpg",
+			tags: [tags.artistic],
+			blurb: "Musical noise-art recordings using homemade amplifiers and analog feedback to create unique generative sounds.",
+			full:
+				<div>
+					<img className="ui medium left floated image" src="images/pareidolia/intro.jpg"></img>
+					<h5 className="ui header"><a href="https://soundcloud.com/p_a_r_e_i_d_o_l_i_a" target="_blank">See my Soundcloud!</a></h5>
+					<p>In college, I began to build vacuum-tube amplifiers and transistor amplifiers outside of class. The soundscapes that I created were complex feedback systems where my synthesizer and sampling machine were connected circularly, which in turn was connected circularly with my amplifiers and microphones placed around my room. By switching the connections of these pieces and playing my synthesizer, I could essentially 'set off' a wave of feedback that I would control with amplitude and frequency modulation. The sound would self-propogate through my system, creating extremely unique patterns. Some of these recordings are impossible to myself to recreate.
+					</p>
+					<p>In order to record these sounds, I used an external tape recorder which placed the sounds on top of tapes filled with decades-old hindi songs, yielding an unusual mix of ambient noises.
+					</p>
+				</div>
+		}
 	]
 }
 
