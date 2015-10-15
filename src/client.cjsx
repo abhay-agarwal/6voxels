@@ -23,8 +23,24 @@ Statement = React.createClass
   render: ->
     <div id="statement" className="long ui modal">
       <h2 className="ui header">
-        Test
+        Artist's Statement
       </h2>
+      <div className="content">
+        <p>In our society, most technical endeavors are highly specialized and carry little cross-cutting knowledge. Unfortunately, this stifles creativity and hinders progress. As a first-generation American, I am intimately aware of the digital divide and the lack of equitable access to resources around the world. India, my country of origin, contains one-third of the world’s poor, one-fifth of the world’s illiterate, and one-tenth of the world’s slum-dwellers. Importantly, these realities do not just point to the need for cheap and accessible life services. They also imply a great need for awareness, empathy, and opportunities to connect.
+        </p>
+        <p>The modern world is more critically augmented by technology than ever before, as systems of livelihood become more managed and autonomous. However, our modes of interaction with even the cutting edge of products still seem brittle, inhuman, and confusing. The process of learning to use technology can be especially alienating due to a lack of perceived encouragement or compassion involved. Worst of all, seemingly straightforward interfaces can obliterate our assumptions about human communication - take, for example, video chatting. Due to our devices’ cameras never being at the point of our gaze during a video chat, we can never make direct eye contact. Psychological researchers have recently discovered that eye contact is one of the most crucial components of child social development because it creates strong emotional cues for empathy. Thus, video chatting is by its imperfect nature a radically hindered form of communication, simply because our industries have ignored the human aspect of technology.
+        </p>
+        <p>My goal with my endeavors is to identify and address such gaps in technology through innovative solutions. I have outlined three broadly promising areas in which this is likely to take place.
+        </p>
+        <ol className="ui list">
+          <li><strong>Interfaces</strong>: The notion and scope of what we define as ‘interface’ will radically evolve over the next decade as devices become more integrated and embedded. It is possible to make objects and tools more responsive and reactive as well as more intuitive and aware. However, it is still open to interpretation as to how such systems may become aware without injecting extreme complexity into every object and situation. However, it is clear that interfaces will become more collaborative, engaging, and environmentally integrated. Additionally, interfaces may become more humanly intuitive to the point that no conscious ‘interaction’ is necessary.
+          </li>
+          <li><strong>Sensation</strong>: Both human sensation and device sensation are likely to improve, as different devices become ‘wearable’ and more creative augmentations and prosthetics are developed. Devices are moving towards holistic sensation of their environment, such as autonomous vehicles and robots, which requires us to rethink how we program technology to calculate and infer. Entirely new forms of sensors are being developed rapidly, with the potential to cure diseases and identify danger more closely than ever. Some creativity will be required in designing these sensing systems to be trustworthy and intuitive.
+          </li>
+          <li><strong>Empathy</strong>: Our ideas around human emotion remain a confusing black box of past and imperfectly perceived present. In order to convey emotion and empathy in objects we must not assume that humans are fundamentally knowable. Instead, might we take advantage of our mechanisms of trust and value to craft interactions that are satisfying, playful, or sociable? Can entire large-scale systems such as mass transit become more ‘empathetic’ in some way? Is there a way to communicate issues of social and political importance in more emotive, visceral ways?
+          </li>
+        </ol>
+      </div>
     </div>
 
 Bio = React.createClass

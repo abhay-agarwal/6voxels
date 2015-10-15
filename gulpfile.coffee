@@ -16,6 +16,7 @@ GLOBAL.Promise = (require 'es6-promise').Promise # to make gulp-postcss happy
 
 src_path = "src"
 img_path = "images"
+ext_path = "ext"
 components_path = "bower_components"
 modules_path = "node_modules"
 semantic_path = "#{modules_path}/semantic-ui-css"
@@ -79,10 +80,16 @@ gulp.task 'copy', ->
   gulp.src("#{src_path}/*.html")
       .pipe(changed(dist_path))
       .pipe(gulp.dest(dist_path))
+  gulp.src("#{ext_path}/**/*")
+      .pipe(changed("#{dist_path}/#{ext_path}"))
+      .pipe(gulp.dest("#{dist_path}/#{ext_path}"))
   gulp.src("#{img_path}/**/*.{jpg,png}")
       .pipe(changed("#{dist_path}/#{img_path}"))
       .pipe(parallel(resize({
-        width: 900,
+        width: 1200,
+      }), os.cpus().length))
+      .pipe(parallel(resize({
+        height: 1200,
         quality: 0.8
       }), os.cpus().length))
       .pipe(gulp.dest("#{dist_path}/#{img_path}"))
