@@ -237,7 +237,7 @@ data = {
 				</div>
 		},
 		{
-			title: "Scan. Join. Be Rewarded",
+			title: "Scan. Join. Be Rewarded.",
 			cover: "images/scan/intro.jpg",
 			tags: [tags.artistic],
 			blurb: "A public art project meant to encourage playful confusion and uncertainty about the urban environment.",
@@ -251,7 +251,7 @@ data = {
 					<p>Such revelatory moments exist all around us, and a discerning eye may find immensely transformative ideas in every nook of urban life. Unfortunately, most of us are locked in a cycle of experience where our senses are shut down in order to focus on a purely single-minded outcome - our job, our home, our school, etc. I often attempt to create public art projects that help people 'pop' out of this cycle of desensitization to momentarily find a greater truth. In this way, I feel that I am producing the modern day version of a Zen Koan.
 					</p>
 					<h3 className="ui dividing header">Installation</h3>
-					<p>"Scan. Join. Be Rewarded" originated from the idea that most of technology and society has begun to adopt a minimalist language of advertising that often feels akin to Haiku. Indeed, the phrase was pulled quite innocuously from the packaging of a grocery product. I placed the phrase along with a completely arbitrary shape onto a small handbill and distributed the handbill around local venues in San Francisco, California.
+					<p>"Scan. Join. Be Rewarded." originated from the idea that most of technology and society has begun to adopt a minimalist language of advertising that often feels akin to Haiku. Indeed, the phrase was pulled quite innocuously from the packaging of a grocery product. I placed the phrase along with a completely arbitrary shape onto a small handbill and distributed the handbill around local venues in San Francisco, California.
 					</p>
 					<p>When shown the handbill, most people react with justified confusion. Unable to discern the true meaning of the phrase and without a stable interpretation, a passerby will start to derive altogether magical explanations. "The handbill must be embedded with an NFC tag," some will assert. Some have put their phone to the handbill or made other gestures in an attempt to test various hypotheses about how to "scan" such an object.
 					</p>
