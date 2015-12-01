@@ -25,10 +25,40 @@ data = {
 	hash: hash,
 	posts: [
 		{
+			title: "Embedded Affordances",
+			cover: "images/embedded/intro.jpg",
+			tags: [tags.independent],
+			blurb: "An embedded platform for adding actionable interfaces to 3D-printed prototypes without specialized manufacturing techniques",
+			full:
+				<div>
+					<h3 className="ui dividing header">Disclaimer</h3>
+					<p><em>This is an in-progress project and many details may change over time. I have been advised that the name 'Embedded Affordances' is misleading towards the nature of the research, and may instead be more accurately termed 'Embedded Interactions'. You may read the in-progress paper <a href="https://www.dropbox.com/s/psfn2eytekct03o/paper.docx?dl=0" target="_blank">at this link</a>.</em>
+					</p>
+					<h3 className="ui dividing header">Motivation</h3>
+					<p>While 3D printing is seeing a growing popularity in the creation of models, molds, jewelry, and other static objects, the creation of interactive objects is still limited to a traditional process of electronics prototyping involving breadboards and hand-assembled circuits.
+					</p>
+					<p>A natural next venture in rapid prototyping is to make it possible for a designer to add functional interactivity to their objects without leaving the environment of desktop CAD software and general purpose manufacturing systems. One example of such a functional interaction may be an embedded LED that illuminates when the model is tapped or shaken. However, more complex multi-dimensional interactions should also be possible.
+					</p>
+					<p>The end goal of this project is to introduce a simple software-driven method for developing complex reactive objects without requiring the user to assemble any circuits or write any code. The models are designed in a traditional CAD program such as SolidWorks and are assembled with non-specialized additive manufacturing equipment (i.e. a 3D-printer).
+					</p>
+					<h3 className="ui dividing header">Background and Prior Works</h3>
+					<p>Several novel inventions have attempted to address the idea of functional prototyping, but require specialized manufacturing equipment and materials. The Voxel8 3D Electronics Printer allows a designer to create 3-dimensional electronic objects with embedded components and a conductive filament. While this product has the potential to engender new forms of electronics, it still requires the designer to have an intimate knowledge of circuits and still requires them to write code in order to manipulate the embedded components. Another drawback to the Voxel8 approach is its inability to separate the process of electronics manufacturing from the creation of an object. This means that many of the last decades of circuit-board innovations must be abandoned in favor of its new paradigm.
+					</p>
+					<p>MIT has developed a 3D printer called MultiFab that allows for the simultaneous printing of at least 10 different materials including the same conductive filament as Voxel8, as well as the ability to sense external objects that are placed in the printing bed. This printer is still in early research stages and is unavailable for mass production and manufacturing. However, it is clear that the capabilities of this printer would allow for better integration of Embedded Affordances through its proximity sensing technology, giving them another vector of implementation.
+					</p>
+					<h3 className="ui dividing header">Solution</h3>
+					<img className="ui large right floated bordered image" src="images/embedded/printing.jpg"></img>
+					<p>This paper introduces a discrete hardware platform called an “embedded affordance”, to denote the action capability ‘afforded’ to the model once the embedded circuit is added. The platform itself constitutes a battery-powered microcontroller unit connected to certain modular sensors and actuators. Embedded affordances are self-powered and designed to be completely enclosed within an object. They use a predictable form-factor that allows them to be “drag and dropped” into a 3D model within a user’s CAD software. The embedded affordances use a stackable design that allows a single sensor or actuator to be attached to the MCU and then flashed with the correct software. Finally, the CAD software automatically creates a cavity within the model for the embedded affordance to be manually inserted during the printing process. Unlike an entirely three-dimensional circuit, the given affordance may be tested in isolation, either by the user or a manufacturing facility.
+					</p>
+					<p>Embedded affordances become more economical to communities due to the tremendously lowered cost of social organization, specifically within the last decade. Resources for designing affordances (such as Thingverse), as well as a network of hardware-sharing (3Dhubs), pay-per-use systems (Shapeways), and increasingly with micro-payment platforms (Kickstarter), aid in the scale of this platform towards community adoption. Finally, the given model can be assembled through a variety of existing desktop 3D-printing systems, rather than requiring a specific system.
+					</p>
+				</div>
+		},
+		{
 			title: "Aquaponic Garden",
 			cover: "images/aquaponic/intro.jpg",
 			tags: [tags.independent],
-			blurb: "Closed-loop garden that recirculates water through an aquarium fish-tank, providing an immensely reduced environmental footprint.",
+			blurb: "Closed-loop garden that recirculates water through an aquarium fish-tank, providing an immensely reduced environmental footprint",
 			full:
 				<div>
 					<img className="ui large left floated image" src="images/aquaponic/done.jpg"></img>
@@ -47,14 +77,14 @@ data = {
 					<p>An aquaponic system cannot simply flow the water through the plant bed because the plants would not have the chance to absorb nutrients from the quickly flowing water. Therefore, most systems (including mine) are of the "ebb and flow" variety, where the water sits in the tray for a short while before being automatically dumped out. In order to achieve this without multiple pumps, valves, and a complex electronic circuit, I made a complex S-shaped valve system (similar to the one in an ordinary toilet) to flush out the water after it reached a certain height. By regulating the speed of the water pump, I can effectively control how much time the water sits in the growth bed before overflowing the valve and dumping into the fish tank.
 					</p>
 					<img className="ui medium left floated image" src="images/aquaponic/tube.jpg"></img>
-					<p>Tilapia are generally considered the optimal fish for aquaponic uses because they are resilient to condition changes and the slighly colder water of the Bay Area. However, those same qualities make them an invasive species and are therefore illegal to distribute in California. The next best and cheapest solution im my situation was goldfish. However, care must be taken to maintain a decent pH above 7 for the fish and a general temperature above 75F.
+					<p>Tilapia are generally considered the optimal fish for aquaponic uses because they are resilient to condition changes and the slighly colder water of the Bay Area. However, those same qualities make them an invasive species and are therefore illegal to distribute in California. The next best and cheapest solution for my situation was goldfish. However, care must be taken to maintain a decent pH above 7 for the fish and a general temperature above 75F.
 					</p>
-					<p>I started with six kale starter plants and a thai holy basil plant that purportedly had anti-toxic properties. Unfortunately, the hydroton in the package was extremely pH negative and the water had to be refreshed with pH neutral hose water until the acidity leveled out. Additionally, household baking soda can be added to the water. to similar effect.
+					<p>I started with six kale starter plants and a thai holy basil plant that purportedly had anti-toxic properties. Unfortunately, the hydroton in the package was extremely pH negative and the water had to be refreshed with pH neutral hose water until the acidity leveled out. Additionally, household baking soda can be added to the water to similar effect.
 					</p>
 					<h3 className="ui dividing header" style={{"clear":"both"}}>Conclusion and Further Developments</h3>
-					<p>My system is still very immature, and many opportunities exist to automate and monitor the system for more optimal outcomes. The feeding of aquaponic fishes is the easiest place for automation. Afterwards, pH and temperature sensors may be placed in the water and automatically controlled with a simple manual regulation via tablespoons of baking soda. The grow light, which is an extra strength halogen lamp, may be regulated to turn on only in periods of low ambient lighting in order to save light. Additionally, it may be turned off for several hours at night while the plants recharge.
+					<p>My system is still very immature, and many opportunities exist to automate and monitor the system for more optimal outcomes. A good starting point is to automate the fish feeding. Afterwards, pH and temperature sensors may be placed in the water and automatically controlled with a simple manual regulation via tablespoons of baking soda. The grow light, which in my case is an extra strength halogen lamp, may be regulated to switch on in periods of low ambient lighting to stabilize the energy intake.
 					</p>
-					<p>Overall, aquaponics presents a striking vision of the future of urban ecology. With a fraction of the water consumption and several accessible routes to monitoring and regulation of the system variables, a full ecological system may be created. Additionally, because the fishes can be eventually consumed by humans, the system is also more-or-less nutritionally complete and could provide a balanced system in irregular environments (such as space). This presents some fascinating opportunities for society as well as academia.
+					<p>Overall, aquaponics presents a striking vision of the future of urban ecology. With a fraction of the water consumption and several accessible routes to monitoring and regulation of the system variables, a full ecological system is possible. Additionally, because the fishes can be eventually consumed by humans, the system is also more-or-less nutritionally complete and could provide a balanced system in irregular environments (such as space or disaster recovery scenarios). This presents some fascinating opportunities for society as well as academia.
 					</p>
 				</div>
 		},
@@ -62,7 +92,7 @@ data = {
 			title: "Denizen.io",
 			cover: "images/denizen/intro.jpg",
 			tags: [tags.professional],
-			blurb: "A local media platform that allows users to create geographically tagged stories and promote other stories in real-time.",
+			blurb: "A local media platform that allows users to create geographically tagged stories and promote other stories in real-time",
 			full:
 				<div>
 					<a href="http://denizen.io" target="_blank"><img className="centered ui image" src="images/denizen/logo.png"></img></a>
@@ -99,7 +129,7 @@ data = {
 			title: "You, Online",
 			cover: "images/you/intro.jpg",
 			tags: [tags.independent],
-			blurb: "A series of public talks on online identity and the future of urban environments.",
+			blurb: "A series of public talks on online identity and the future of urban environments",
 			full:
 				<div>
 					<img className="centered ui image" src="images/you/slide.jpg"></img>
@@ -132,9 +162,10 @@ data = {
 			title: "CITRIS Personal Robots",
 			cover: "images/citris/intro.jpg",
 			tags: [tags.academic],
-			blurb: "Improving the expressiveness and functionality of humanoid robots through adaptive software mechanisms.",
+			blurb: "Improving the expressiveness and functionality of humanoid robots through adaptive software mechanisms",
 			full:
 				<div>
+					<em>My Research Advisor for this project was <a href="http://www.eecs.berkeley.edu/Faculty/Homepages/bajcsy.html" target="_blank">Ruzena Bajcsy</a></em>
 					<h3 className="ui dividing header">Motivation</h3>
 					<img className="ui small right floated image" src="images/citris/robot.jpg"></img>
 					<p>During my final year of my bachelor's degree at UC Berkeley, I spent time in the Center for Information Technology Research in the Interest of Society (CITRIS) within their <a href="http://citris-uc.org/initiatives/robotics-2" target="_blank">People and Robots Initiative</a> lab.
@@ -162,9 +193,10 @@ data = {
 			title: "Quadcopter Semi-Rigid Design",
 			cover: "images/quadcopter/intro.jpg",
 			tags: [tags.academic],
-			blurb: "Designing a cheap and durable quadrotor with adaptive software qualities that respond to imperfections such as vibration.",
+			blurb: "Designing a cheap and durable quadrotor with adaptive software qualities that respond to imperfections such as vibration",
 			full:
 				<div>
+					<em>My Research Advisor for this project was <a href="http://ptolemy.eecs.berkeley.edu/~eal/" target="_blank">Edward Lee</a></em>
 					<h3 className="ui dividing header">Description</h3>
 					<img className="ui small right floated image" src="images/quadcopter/assembled.jpg"></img>
 					<p>As part of my embedded systems work with <a href="http://ptolemy.eecs.berkeley.edu/~eal/" target="_blank">Edward Lee</a> I worked on a collaborative effort to build and program robust on-board control software for complex mechatronic systems. One such system that is heavily studied is the quadcopter, which is usually designed using rigid materials. Even though a more flexible frame may benefit the overall durability of the system in the case of impact, such lightweight materials carry the risk of excessive vibration. Our system was able to overcome such limitations using a more complex onboard control system and better sensor sampling (to eliminate false frequencies with request to the Nyquist freqency).
@@ -187,7 +219,7 @@ data = {
 			title: "Mesosphere Product Prototype",
 			cover: "images/mesosphere/intro.jpg",
 			tags: [tags.professional],
-			blurb: "Product prototype of autonomous distributed infrastructure.",
+			blurb: "Product prototype of autonomous distributed infrastructure",
 			full:
 				<div>
 					<div className="ui embed" data-source="youtube" data-id="0I6qG9RQUnY"></div>
@@ -202,11 +234,11 @@ data = {
 			title: "Sony Car Interface Prototype",
 			cover: "images/sony car/intro.jpg",
 			tags: [tags.professional],
-			blurb: "Natural music interface for an experimental car interface device.",
+			blurb: "Natural music interface for an experimental car interface device",
 			full:
 				<div>
 					<h3 className="ui dividing header">Disclaimer</h3>
-					<p>The work I did for Sony is protected under an NDA, with the exception of a brief overview for portfolio purposes. This description is truncated and images of the final project have been withheld.
+					<p><em>The work I did for Sony is protected under an NDA, with the exception of a brief overview for portfolio purposes. This description is truncated and images of the final project have been withheld.</em>
 					</p>
 					<h3 className="ui dividing header">Project Description</h3>
 					<p>This project was completed during my role Sony's Human-Computer Interaction department headquartered in Shinagawa, Tokyo. One of the products being developed was a in-car display interface. My project centered around creating a prototype of a novel human-interaction for playing music inside the car. I had full creative autonomy over this project, from concept to implementation and code.
@@ -221,11 +253,11 @@ data = {
 			title: "Sony Home Theater Prototype",
 			cover: "images/sony home/intro.jpg",
 			tags: [tags.professional],
-			blurb: "Connected home-theater prototype that allowed a person to interact seamlessly between their television, soundsystem, phone, and internet.",
+			blurb: "Connected home-theater prototype that allowed a person to interact seamlessly between their television, soundsystem, phone, and internet",
 			full:
 				<div>
 					<h3 className="ui dividing header">Disclaimer</h3>
-					<p>The work I did for Sony is protected under an NDA, with the exception of a brief overview for portfolio purposes. This description is truncated and images of the final project have been withheld.
+					<p><em>The work I did for Sony is protected under an NDA, with the exception of a brief overview for portfolio purposes. This description is truncated and images of the final project have been withheld.</em>
 					</p>
 					<h3 className="ui dividing header">Project Description</h3>
 					<p>This project was completed during my role Sony's Human-Computer Interaction department headquartered in Shinagawa, Tokyo. One of the products being developed was a complete approach to home theater automation that connected the devices in the living room to create a smooth seamless experience that could easily switch between different forms of entertainment.
@@ -240,7 +272,7 @@ data = {
 			title: "Scan. Join. Be Rewarded.",
 			cover: "images/scan/intro.jpg",
 			tags: [tags.artistic],
-			blurb: "A public art project meant to encourage playful confusion and uncertainty about the urban environment.",
+			blurb: "A public art project meant to encourage playful confusion and uncertainty about the urban environment",
 			full:
 				<div>
 					<img className="centered ui image" src="images/scan/public.jpg"></img>
@@ -265,7 +297,7 @@ data = {
 			title: "Antifa",
 			cover: "images/antifa/intro.jpg",
 			tags: [tags.artistic],
-			blurb: "Part of a series of public artworks investigating the impact of advertising and lifestyle media on urban society.",
+			blurb: "Part of a series of public artworks investigating the impact of advertising and lifestyle media on urban society",
 			full:
 				<div>
 					<h3 className="ui dividing header">Background</h3>
@@ -287,7 +319,7 @@ data = {
 			title: "Crew",
 			cover: "images/crew/intro.jpg",
 			tags: [tags.artistic],
-			blurb: "Part of a series of public artworks investigating the impact of advertising and lifestyle media on urban society.",
+			blurb: "Part of a series of public artworks investigating the impact of advertising and lifestyle media on urban society",
 			full:
 				<div>
 					<div className="ui two column grid">
@@ -314,7 +346,7 @@ data = {
 			title: "E",
 			cover: "images/e/intro.jpg",
 			tags: [tags.artistic],
-			blurb: "Part of a series of public artworks investigating the impact of advertising and lifestyle media on urban society.",
+			blurb: "Part of a series of public artworks investigating the impact of advertising and lifestyle media on urban society",
 			full:
 				<div>
 					<h3 className="ui dividing header">Background</h3>
@@ -337,7 +369,7 @@ data = {
 			title: "Limelighter",
 			cover: "images/limelighter/interface.jpg",
 			tags: [tags.independent],
-			blurb: "A browser extension that allows you to highlight the web like a textbook.",
+			blurb: "A browser extension that allows you to highlight the web like a textbook",
 			full:
 				<div>
 					<h3 className="ui dividing header">Description</h3>
@@ -360,9 +392,10 @@ data = {
 			title: "Fourier Analysis of Gradient Density Rotational Fluid Flow",
 			cover: "images/couette/intro.jpg",
 			tags: [tags.academic],
-			blurb: "Studying the time and frequency domain of rotational flow in both homogeneous and gradient density fluids, with applications to manufacturing and plantary atmospheric research.",
+			blurb: "Studying the time and frequency domain of rotational flow in both homogeneous and gradient density fluids, with applications to manufacturing and plantary atmospheric research",
 			full:
 				<div>
+					<em>My Research Advisor for this project was <a href="http://chaos.utexas.edu/people/faculty/harry-l-swinney" target="_blank">Harry Swinney</a></em>
 					<h3 className="ui dividing header">Description</h3>
 					<img className="ui large right floated image" src="images/couette/diagram.jpg"></img>
 					<h5 className="ui header">You may find the published papers <a href="ext/Rodenborn_Talk.pdf" target="_blank">here</a> and <a href="ext/CouetteTaylor.pdf" target="_blank">here</a>.</h5>
@@ -392,7 +425,7 @@ data = {
 			title: "Pareidolia",
 			cover: "images/pareidolia/intro.jpg",
 			tags: [tags.artistic],
-			blurb: "Musical noise-art recordings using homemade amplifiers and analog feedback to create unique generative sounds.",
+			blurb: "Musical noise-art recordings using homemade amplifiers and analog feedback to create unique generative sounds",
 			full:
 				<div>
 					<img className="ui medium left floated image" src="images/pareidolia/intro.jpg"></img>
