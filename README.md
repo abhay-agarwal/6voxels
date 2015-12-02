@@ -1,4 +1,6 @@
-Abhay Agarwal's 6voxels portfolio source code.
+Abhay Agarwal's portfolio.
+
+[See it here](http://6voxels.com)
 
 ##License
 GPLv3
