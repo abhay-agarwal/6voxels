@@ -25,6 +25,25 @@ data = {
 	hash: hash,
 	posts: [
 		{
+			title: "Pratham PEEKS",
+			cover: "images/peeks/tablet.jpg",
+			tags: [tags.independent],
+			blurb: "PEEKS (Project for Ensuring Every Kid Succeeds) is a resilient child literacy tracking system for Pratham, one of the world's largest nonprofit organizations in education",
+			full:
+				<div>
+					<img className="centered ui image" src="images/peeks/tablet-wide.jpg"></img>
+					<h3 className="ui dividing header">Background</h3>
+					<p>I was given the opportunity to travel to India to work with <a href="http://pratham.org/" target="_blank">Pratham</a>, one of the world's largest nonprofits in the education sector. Pratham was originally interested in implementing my geo-spatial tool Denizen, but also offered me the open-ended opportunity to design my own technology project to address Pratham's broad goals of child literacy and education.
+					</p>
+					<h3 className="ui dividing header">Summary</h3>
+					<p>PEEKS (Project for Ensuring Every Kid Succeeds) is a program to create higher data fidelity on a per-child level within Pratham, in order to assist in improving the quality of Pratham’s services. It proposes an efficient methodology for collecting child-wise data in the field through a global identification token (ID number) and a resilient search portal for identifying children via incomplete information. Due to its simplicity, scalability, and offline-capability, this methodology is designed to be integrated into all of Pratham’s educational initiatives to create a highly connected (i.e. dense) dataset of child learning data and multi-year progress. Additionally, PEEKS proposes a methodology for conducting statistical/probabilistic data science, setting a base for many subsequent technological and research opportunities, ranging from third-party academic studies to educational tablet apps.
+					</p>
+					<h3 className="ui dividing header">Write-up</h3>
+					<p><em>You may read the in-progress paper <a href="https://www.dropbox.com/s/q49rbk78w6rrpu8/Updated%20Project%20Proposal.docx?dl=0" target="_blank">at this link</a>.</em>
+					</p>
+				</div>
+		},
+		{
 			title: "Embedded Affordances",
 			cover: "images/embedded/intro.jpg",
 			tags: [tags.independent],
@@ -48,9 +67,22 @@ data = {
 					</p>
 					<h3 className="ui dividing header">Solution</h3>
 					<img className="ui large right floated bordered image" src="images/embedded/printing.jpg"></img>
-					<p>This paper introduces a discrete hardware platform called an “embedded affordance”, to denote the action capability ‘afforded’ to the model once the embedded circuit is added. The platform itself constitutes a battery-powered microcontroller unit connected to certain modular sensors and actuators. Embedded affordances are self-powered and designed to be completely enclosed within an object. They use a predictable form-factor that allows them to be “drag and dropped” into a 3D model within a user’s CAD software. The embedded affordances use a stackable design that allows a single sensor or actuator to be attached to the MCU and then flashed with the correct software. Finally, the CAD software automatically creates a cavity within the model for the embedded affordance to be manually inserted during the printing process. Unlike an entirely three-dimensional circuit, the given affordance may be tested in isolation, either by the user or a manufacturing facility.
+					<p>This project introduces a discrete hardware platform called an “embedded affordance”, to denote the action capability ‘afforded’ to the model once the embedded circuit is added. The platform itself constitutes a battery-powered microcontroller unit connected to certain modular sensors and actuators. Embedded affordances are self-powered and designed to be completely enclosed within an object. They use a predictable form-factor that allows them to be “drag and dropped” into a 3D model within a user’s CAD software. The embedded affordances use a stackable design that allows a single sensor or actuator to be attached to the MCU and then flashed with the correct software. Finally, the CAD software automatically creates a cavity within the model for the embedded affordance to be manually inserted during the printing process. Unlike an entirely three-dimensional circuit, the given affordance may be tested in isolation, either by the user or a manufacturing facility.
 					</p>
 					<p>Embedded affordances become more economical to communities due to the tremendously lowered cost of social organization, specifically within the last decade. Resources for designing affordances (such as Thingverse), as well as a network of hardware-sharing (3Dhubs), pay-per-use systems (Shapeways), and increasingly with micro-payment platforms (Kickstarter), aid in the scale of this platform towards community adoption. Finally, the given model can be assembled through a variety of existing desktop 3D-printing systems, rather than requiring a specific system.
+					</p>
+					<h3 className="ui dividing header">Prototypes</h3>
+					<div className="ui two column grid">
+						<div className="column">
+							<img className="ui fluid image" src="images/embedded/exploded.jpg"></img>
+						</div>
+						<div className="column">
+							<img className="ui fluid image" src="images/embedded/anim.gif"></img>
+						</div>
+					</div>
+					<p>
+					</p>
+					<p>
 					</p>
 				</div>
 		},

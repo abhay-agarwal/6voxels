@@ -83,7 +83,7 @@ gulp.task 'copy', ->
   gulp.src("#{ext_path}/**/*")
       .pipe(changed("#{dist_path}/#{ext_path}"))
       .pipe(gulp.dest("#{dist_path}/#{ext_path}"))
-  gulp.src("#{img_path}/**/*.{jpg,png}")
+  gulp.src("#{img_path}/**/*.{jpg,png,gif}")
       .pipe(changed("#{dist_path}/#{img_path}"))
       .pipe(parallel(resize({
         width: 1400,
